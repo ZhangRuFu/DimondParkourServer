@@ -1,0 +1,3 @@
+/home/zrf/桌面/DimondParkour/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/zrf/桌面/DimondParkour/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/zrf/桌面/DimondParkour/cmake-build-debug/CMakeFiles/DimondParkour.dir
