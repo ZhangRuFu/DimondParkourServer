@@ -6,8 +6,16 @@
 
 #IncludeRegexTransform: 
 
+/home/zrf/桌面/DimondParkour/header/Client.h
+Player.h
+/home/zrf/桌面/DimondParkour/header/Player.h
+
 /home/zrf/桌面/DimondParkour/header/Convert.h
 string
+-
+
+/home/zrf/桌面/DimondParkour/header/Debug.h
+iostream
 -
 
 /home/zrf/桌面/DimondParkour/header/Encoding.h
@@ -16,7 +24,17 @@ codecvt
 locale
 -
 
+/home/zrf/桌面/DimondParkour/header/GameLobby.h
+set
+-
+../header/Client.h
+/home/zrf/桌面/DimondParkour/header/Client.h
+
 /home/zrf/桌面/DimondParkour/header/Message.h
+string
+-
+
+/home/zrf/桌面/DimondParkour/header/Player.h
 string
 -
 
@@ -28,6 +46,30 @@ utility
 vector
 -
 
+/home/zrf/桌面/DimondParkour/header/ThreadManager.h
+vector
+-
+thread
+-
+
+/home/zrf/桌面/DimondParkour/source/Client.cpp
+../header/Client.h
+/home/zrf/桌面/DimondParkour/header/Client.h
+../header/Encoding.h
+/home/zrf/桌面/DimondParkour/header/Encoding.h
+../header/Message.h
+/home/zrf/桌面/DimondParkour/header/Message.h
+../header/SerializeStream.h
+/home/zrf/桌面/DimondParkour/header/SerializeStream.h
+../header/GameLobby.h
+/home/zrf/桌面/DimondParkour/header/GameLobby.h
+unistd.h
+-
+iostream
+-
+string
+-
+
 /home/zrf/桌面/DimondParkour/source/Convert.cpp
 ../header/Convert.h
 /home/zrf/桌面/DimondParkour/header/Convert.h
@@ -37,6 +79,12 @@ vector
 /home/zrf/桌面/DimondParkour/source/Encoding.cpp
 ../header/Encoding.h
 /home/zrf/桌面/DimondParkour/header/Encoding.h
+
+/home/zrf/桌面/DimondParkour/source/GameLobby.cpp
+../header/GameLobby.h
+/home/zrf/桌面/DimondParkour/header/GameLobby.h
+../header/Debug.h
+/home/zrf/桌面/DimondParkour/header/Debug.h
 
 /home/zrf/桌面/DimondParkour/source/Message.cpp
 ../header/Message.h
@@ -73,6 +121,10 @@ string
 /home/zrf/桌面/DimondParkour/header/Encoding.h
 ../header/SerializeStream.h
 /home/zrf/桌面/DimondParkour/header/SerializeStream.h
-../header/Message.h
-/home/zrf/桌面/DimondParkour/header/Message.h
+../header/Client.h
+/home/zrf/桌面/DimondParkour/header/Client.h
+../header/ThreadManager.h
+/home/zrf/桌面/DimondParkour/header/ThreadManager.h
+thread
+-
 

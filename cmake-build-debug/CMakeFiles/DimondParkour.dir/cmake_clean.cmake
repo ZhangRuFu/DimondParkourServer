@@ -4,6 +4,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/DimondParkour.dir/source/SerializeStream.cpp.o"
   "CMakeFiles/DimondParkour.dir/source/Message.cpp.o"
   "CMakeFiles/DimondParkour.dir/source/Convert.cpp.o"
+  "CMakeFiles/DimondParkour.dir/source/Client.cpp.o"
+  "CMakeFiles/DimondParkour.dir/source/GameLobby.cpp.o"
   "DimondParkour.pdb"
   "DimondParkour"
 )

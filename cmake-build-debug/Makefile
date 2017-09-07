@@ -123,6 +123,33 @@ DimondParkour/fast:
 	$(MAKE) -f CMakeFiles/DimondParkour.dir/build.make CMakeFiles/DimondParkour.dir/build
 .PHONY : DimondParkour/fast
 
+source/Client.o: source/Client.cpp.o
+
+.PHONY : source/Client.o
+
+# target to build an object file
+source/Client.cpp.o:
+	$(MAKE) -f CMakeFiles/DimondParkour.dir/build.make CMakeFiles/DimondParkour.dir/source/Client.cpp.o
+.PHONY : source/Client.cpp.o
+
+source/Client.i: source/Client.cpp.i
+
+.PHONY : source/Client.i
+
+# target to preprocess a source file
+source/Client.cpp.i:
+	$(MAKE) -f CMakeFiles/DimondParkour.dir/build.make CMakeFiles/DimondParkour.dir/source/Client.cpp.i
+.PHONY : source/Client.cpp.i
+
+source/Client.s: source/Client.cpp.s
+
+.PHONY : source/Client.s
+
+# target to generate assembly for a file
+source/Client.cpp.s:
+	$(MAKE) -f CMakeFiles/DimondParkour.dir/build.make CMakeFiles/DimondParkour.dir/source/Client.cpp.s
+.PHONY : source/Client.cpp.s
+
 source/Convert.o: source/Convert.cpp.o
 
 .PHONY : source/Convert.o
@@ -176,6 +203,33 @@ source/Encoding.s: source/Encoding.cpp.s
 source/Encoding.cpp.s:
 	$(MAKE) -f CMakeFiles/DimondParkour.dir/build.make CMakeFiles/DimondParkour.dir/source/Encoding.cpp.s
 .PHONY : source/Encoding.cpp.s
+
+source/GameLobby.o: source/GameLobby.cpp.o
+
+.PHONY : source/GameLobby.o
+
+# target to build an object file
+source/GameLobby.cpp.o:
+	$(MAKE) -f CMakeFiles/DimondParkour.dir/build.make CMakeFiles/DimondParkour.dir/source/GameLobby.cpp.o
+.PHONY : source/GameLobby.cpp.o
+
+source/GameLobby.i: source/GameLobby.cpp.i
+
+.PHONY : source/GameLobby.i
+
+# target to preprocess a source file
+source/GameLobby.cpp.i:
+	$(MAKE) -f CMakeFiles/DimondParkour.dir/build.make CMakeFiles/DimondParkour.dir/source/GameLobby.cpp.i
+.PHONY : source/GameLobby.cpp.i
+
+source/GameLobby.s: source/GameLobby.cpp.s
+
+.PHONY : source/GameLobby.s
+
+# target to generate assembly for a file
+source/GameLobby.cpp.s:
+	$(MAKE) -f CMakeFiles/DimondParkour.dir/build.make CMakeFiles/DimondParkour.dir/source/GameLobby.cpp.s
+.PHONY : source/GameLobby.cpp.s
 
 source/Message.o: source/Message.cpp.o
 
@@ -267,12 +321,18 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... DimondParkour"
+	@echo "... source/Client.o"
+	@echo "... source/Client.i"
+	@echo "... source/Client.s"
 	@echo "... source/Convert.o"
 	@echo "... source/Convert.i"
 	@echo "... source/Convert.s"
 	@echo "... source/Encoding.o"
 	@echo "... source/Encoding.i"
 	@echo "... source/Encoding.s"
+	@echo "... source/GameLobby.o"
+	@echo "... source/GameLobby.i"
+	@echo "... source/GameLobby.s"
 	@echo "... source/Message.o"
 	@echo "... source/Message.i"
 	@echo "... source/Message.s"

@@ -4,8 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/zrf/桌面/DimondParkour/source/Client.cpp" "/home/zrf/桌面/DimondParkour/cmake-build-debug/CMakeFiles/DimondParkour.dir/source/Client.cpp.o"
   "/home/zrf/桌面/DimondParkour/source/Convert.cpp" "/home/zrf/桌面/DimondParkour/cmake-build-debug/CMakeFiles/DimondParkour.dir/source/Convert.cpp.o"
   "/home/zrf/桌面/DimondParkour/source/Encoding.cpp" "/home/zrf/桌面/DimondParkour/cmake-build-debug/CMakeFiles/DimondParkour.dir/source/Encoding.cpp.o"
+  "/home/zrf/桌面/DimondParkour/source/GameLobby.cpp" "/home/zrf/桌面/DimondParkour/cmake-build-debug/CMakeFiles/DimondParkour.dir/source/GameLobby.cpp.o"
   "/home/zrf/桌面/DimondParkour/source/Message.cpp" "/home/zrf/桌面/DimondParkour/cmake-build-debug/CMakeFiles/DimondParkour.dir/source/Message.cpp.o"
   "/home/zrf/桌面/DimondParkour/source/SerializeStream.cpp" "/home/zrf/桌面/DimondParkour/cmake-build-debug/CMakeFiles/DimondParkour.dir/source/SerializeStream.cpp.o"
   "/home/zrf/桌面/DimondParkour/source/main.cpp" "/home/zrf/桌面/DimondParkour/cmake-build-debug/CMakeFiles/DimondParkour.dir/source/main.cpp.o"

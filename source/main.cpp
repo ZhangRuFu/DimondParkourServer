@@ -6,14 +6,21 @@
 #include <string>
 #include "../header/Encoding.h"
 #include "../header/SerializeStream.h"
-#include "../header/Message.h"
+#include "../header/Client.h"
+#include "../header/ThreadManager.h"
+#include <thread>
 
 #define PORT 8888
 typedef unsigned char byte;
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wmissing-noreturn"
 int main() {
-
+    //using namespace std;
     int res = 0;
+
+    ThreadManager tm;
+
     int serSocket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
     sockaddr_in serAddr;
     serAddr.sin_addr.s_addr = 0;
@@ -29,17 +36,17 @@ int main() {
         sockaddr_in clientAddr;
         socklen_t sockLen = sizeof(clientAddr);
         int clientSock = accept(serSocket, (sockaddr*)&clientAddr, &sockLen);
+
+        //新玩家加入
         std::cout << "客户端IP:" << inet_ntoa(clientAddr.sin_addr) << " 端口号:" << ntohs(clientAddr.sin_port) << std::endl;
 
-        char buffer[2048];
-        int ab = read(clientSock, buffer, 2048);
-        buffer[ab] = 0;
-        std::cout << "接收长度:" << ab << "内容:" << buffer << std::endl;
-
-
-        close(clientSock);
+        //套接字资源属主转移
+        Client *newClient = new Client(clientSock);
+        std::thread *t = new std::thread(*newClient);
     }
     close(serSocket);
 
+    //自动释放线程资源
     return 0;
 }
+#pragma clang diagnostic pop

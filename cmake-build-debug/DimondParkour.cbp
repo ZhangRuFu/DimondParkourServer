@@ -84,13 +84,34 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/zrf/桌面/DimondParkour/header/Client.h">
+			<Option target="DimondParkour"/>
+		</Unit>
 		<Unit filename="/home/zrf/桌面/DimondParkour/header/Convert.h">
+			<Option target="DimondParkour"/>
+		</Unit>
+		<Unit filename="/home/zrf/桌面/DimondParkour/header/Debug.h">
+			<Option target="DimondParkour"/>
+		</Unit>
+		<Unit filename="/home/zrf/桌面/DimondParkour/header/GameLobby.h">
+			<Option target="DimondParkour"/>
+		</Unit>
+		<Unit filename="/home/zrf/桌面/DimondParkour/header/Player.h">
+			<Option target="DimondParkour"/>
+		</Unit>
+		<Unit filename="/home/zrf/桌面/DimondParkour/header/ThreadManager.h">
+			<Option target="DimondParkour"/>
+		</Unit>
+		<Unit filename="/home/zrf/桌面/DimondParkour/source/Client.cpp">
 			<Option target="DimondParkour"/>
 		</Unit>
 		<Unit filename="/home/zrf/桌面/DimondParkour/source/Convert.cpp">
 			<Option target="DimondParkour"/>
 		</Unit>
 		<Unit filename="/home/zrf/桌面/DimondParkour/source/Encoding.cpp">
+			<Option target="DimondParkour"/>
+		</Unit>
+		<Unit filename="/home/zrf/桌面/DimondParkour/source/GameLobby.cpp">
 			<Option target="DimondParkour"/>
 		</Unit>
 		<Unit filename="/home/zrf/桌面/DimondParkour/source/Message.cpp">
