@@ -59,4 +59,15 @@ public:
     virtual int Deserialize(SerializeStream &stream);
     virtual std::string Serialize(void);
 };
+
+//开始游戏消息
+
+
+//游戏逻辑消息（位置同步）
+
+
+
+//进入商店消息
+
+
 #endif //DIMONDPARKOUR_MESSAGE_H

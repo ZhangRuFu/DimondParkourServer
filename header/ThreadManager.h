@@ -7,13 +7,26 @@
 
 #include <vector>
 #include <thread>
+#include "../header/GameLobby.h"
+#include "../header/CheckLobby.h"
+
 class ThreadManager
 {
 private:
     std::vector<std::thread*> m_threads;
 
 public:
+    ThreadManager(void)
+    {
+        //开辟游戏大厅线程
+        std::thread *LobbyThread = new std::thread(GameLobbyThread);
+        Add(LobbyThread);
+        std::thread *CheckThread = new std::thread(GameLobbyThread);
+        Add(CheckThread);
+    }
+
     void Add(std::thread *newThread){m_threads.push_back(newThread);}
+
     ~ThreadManager(void)
     {
         Release();
@@ -24,6 +37,16 @@ private:
     {
         for(int i = 0; i < m_threads.size(); ++i)
             delete m_threads[i];
+    }
+
+    static void GameLobbyThread(void)
+    {
+        GameLobby::Instance()->Update();
+    }
+
+    static void CheckLobbyThread(void)
+    {
+        CheckLobby::Instance()->Update();
     }
 };
 

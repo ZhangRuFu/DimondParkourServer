@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/zrf/Software/CLion/clion-2017.1.1/bin/cmake/bin/cmake
+CMAKE_COMMAND = /usr/bin/clion/clion-2017.1.1/bin/cmake/bin/cmake
 
 # The command to remove a file.
-RM = /home/zrf/Software/CLion/clion-2017.1.1/bin/cmake/bin/cmake -E remove -f
+RM = /usr/bin/clion/clion-2017.1.1/bin/cmake/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/zrf/Desktop/DimondParkourServer/DimondParkourServer
+CMAKE_SOURCE_DIR = /home/zrf/桌面/DimondParkour
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/zrf/Desktop/DimondParkourServer/DimondParkourServer/cmake-build-debug
+CMAKE_BINARY_DIR = /home/zrf/桌面/DimondParkour/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/DimondParkour.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/DimondParkour.dir/flags.make
 
 CMakeFiles/DimondParkour.dir/source/main.cpp.o: CMakeFiles/DimondParkour.dir/flags.make
 CMakeFiles/DimondParkour.dir/source/main.cpp.o: ../source/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/DimondParkour.dir/source/main.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DimondParkour.dir/source/main.cpp.o -c /home/zrf/Desktop/DimondParkourServer/DimondParkourServer/source/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zrf/桌面/DimondParkour/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/DimondParkour.dir/source/main.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DimondParkour.dir/source/main.cpp.o -c /home/zrf/桌面/DimondParkour/source/main.cpp
 
 CMakeFiles/DimondParkour.dir/source/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DimondParkour.dir/source/main.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zrf/Desktop/DimondParkourServer/DimondParkourServer/source/main.cpp > CMakeFiles/DimondParkour.dir/source/main.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zrf/桌面/DimondParkour/source/main.cpp > CMakeFiles/DimondParkour.dir/source/main.cpp.i
 
 CMakeFiles/DimondParkour.dir/source/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DimondParkour.dir/source/main.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zrf/Desktop/DimondParkourServer/DimondParkourServer/source/main.cpp -o CMakeFiles/DimondParkour.dir/source/main.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zrf/桌面/DimondParkour/source/main.cpp -o CMakeFiles/DimondParkour.dir/source/main.cpp.s
 
 CMakeFiles/DimondParkour.dir/source/main.cpp.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/DimondParkour.dir/source/main.cpp.o.provides.build: CMakeFiles/Dimond
 
 CMakeFiles/DimondParkour.dir/source/Encoding.cpp.o: CMakeFiles/DimondParkour.dir/flags.make
 CMakeFiles/DimondParkour.dir/source/Encoding.cpp.o: ../source/Encoding.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/DimondParkour.dir/source/Encoding.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DimondParkour.dir/source/Encoding.cpp.o -c /home/zrf/Desktop/DimondParkourServer/DimondParkourServer/source/Encoding.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zrf/桌面/DimondParkour/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/DimondParkour.dir/source/Encoding.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DimondParkour.dir/source/Encoding.cpp.o -c /home/zrf/桌面/DimondParkour/source/Encoding.cpp
 
 CMakeFiles/DimondParkour.dir/source/Encoding.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DimondParkour.dir/source/Encoding.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zrf/Desktop/DimondParkourServer/DimondParkourServer/source/Encoding.cpp > CMakeFiles/DimondParkour.dir/source/Encoding.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zrf/桌面/DimondParkour/source/Encoding.cpp > CMakeFiles/DimondParkour.dir/source/Encoding.cpp.i
 
 CMakeFiles/DimondParkour.dir/source/Encoding.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DimondParkour.dir/source/Encoding.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zrf/Desktop/DimondParkourServer/DimondParkourServer/source/Encoding.cpp -o CMakeFiles/DimondParkour.dir/source/Encoding.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zrf/桌面/DimondParkour/source/Encoding.cpp -o CMakeFiles/DimondParkour.dir/source/Encoding.cpp.s
 
 CMakeFiles/DimondParkour.dir/source/Encoding.cpp.o.requires:
 
@@ -107,16 +107,16 @@ CMakeFiles/DimondParkour.dir/source/Encoding.cpp.o.provides.build: CMakeFiles/Di
 
 CMakeFiles/DimondParkour.dir/source/SerializeStream.cpp.o: CMakeFiles/DimondParkour.dir/flags.make
 CMakeFiles/DimondParkour.dir/source/SerializeStream.cpp.o: ../source/SerializeStream.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/DimondParkour.dir/source/SerializeStream.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DimondParkour.dir/source/SerializeStream.cpp.o -c /home/zrf/Desktop/DimondParkourServer/DimondParkourServer/source/SerializeStream.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zrf/桌面/DimondParkour/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/DimondParkour.dir/source/SerializeStream.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DimondParkour.dir/source/SerializeStream.cpp.o -c /home/zrf/桌面/DimondParkour/source/SerializeStream.cpp
 
 CMakeFiles/DimondParkour.dir/source/SerializeStream.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DimondParkour.dir/source/SerializeStream.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zrf/Desktop/DimondParkourServer/DimondParkourServer/source/SerializeStream.cpp > CMakeFiles/DimondParkour.dir/source/SerializeStream.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zrf/桌面/DimondParkour/source/SerializeStream.cpp > CMakeFiles/DimondParkour.dir/source/SerializeStream.cpp.i
 
 CMakeFiles/DimondParkour.dir/source/SerializeStream.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DimondParkour.dir/source/SerializeStream.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zrf/Desktop/DimondParkourServer/DimondParkourServer/source/SerializeStream.cpp -o CMakeFiles/DimondParkour.dir/source/SerializeStream.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zrf/桌面/DimondParkour/source/SerializeStream.cpp -o CMakeFiles/DimondParkour.dir/source/SerializeStream.cpp.s
 
 CMakeFiles/DimondParkour.dir/source/SerializeStream.cpp.o.requires:
 
@@ -131,16 +131,16 @@ CMakeFiles/DimondParkour.dir/source/SerializeStream.cpp.o.provides.build: CMakeF
 
 CMakeFiles/DimondParkour.dir/source/Message.cpp.o: CMakeFiles/DimondParkour.dir/flags.make
 CMakeFiles/DimondParkour.dir/source/Message.cpp.o: ../source/Message.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/DimondParkour.dir/source/Message.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DimondParkour.dir/source/Message.cpp.o -c /home/zrf/Desktop/DimondParkourServer/DimondParkourServer/source/Message.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zrf/桌面/DimondParkour/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/DimondParkour.dir/source/Message.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DimondParkour.dir/source/Message.cpp.o -c /home/zrf/桌面/DimondParkour/source/Message.cpp
 
 CMakeFiles/DimondParkour.dir/source/Message.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DimondParkour.dir/source/Message.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zrf/Desktop/DimondParkourServer/DimondParkourServer/source/Message.cpp > CMakeFiles/DimondParkour.dir/source/Message.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zrf/桌面/DimondParkour/source/Message.cpp > CMakeFiles/DimondParkour.dir/source/Message.cpp.i
 
 CMakeFiles/DimondParkour.dir/source/Message.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DimondParkour.dir/source/Message.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zrf/Desktop/DimondParkourServer/DimondParkourServer/source/Message.cpp -o CMakeFiles/DimondParkour.dir/source/Message.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zrf/桌面/DimondParkour/source/Message.cpp -o CMakeFiles/DimondParkour.dir/source/Message.cpp.s
 
 CMakeFiles/DimondParkour.dir/source/Message.cpp.o.requires:
 
@@ -155,16 +155,16 @@ CMakeFiles/DimondParkour.dir/source/Message.cpp.o.provides.build: CMakeFiles/Dim
 
 CMakeFiles/DimondParkour.dir/source/Convert.cpp.o: CMakeFiles/DimondParkour.dir/flags.make
 CMakeFiles/DimondParkour.dir/source/Convert.cpp.o: ../source/Convert.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/DimondParkour.dir/source/Convert.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DimondParkour.dir/source/Convert.cpp.o -c /home/zrf/Desktop/DimondParkourServer/DimondParkourServer/source/Convert.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zrf/桌面/DimondParkour/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/DimondParkour.dir/source/Convert.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DimondParkour.dir/source/Convert.cpp.o -c /home/zrf/桌面/DimondParkour/source/Convert.cpp
 
 CMakeFiles/DimondParkour.dir/source/Convert.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DimondParkour.dir/source/Convert.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zrf/Desktop/DimondParkourServer/DimondParkourServer/source/Convert.cpp > CMakeFiles/DimondParkour.dir/source/Convert.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zrf/桌面/DimondParkour/source/Convert.cpp > CMakeFiles/DimondParkour.dir/source/Convert.cpp.i
 
 CMakeFiles/DimondParkour.dir/source/Convert.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DimondParkour.dir/source/Convert.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zrf/Desktop/DimondParkourServer/DimondParkourServer/source/Convert.cpp -o CMakeFiles/DimondParkour.dir/source/Convert.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zrf/桌面/DimondParkour/source/Convert.cpp -o CMakeFiles/DimondParkour.dir/source/Convert.cpp.s
 
 CMakeFiles/DimondParkour.dir/source/Convert.cpp.o.requires:
 
@@ -179,16 +179,16 @@ CMakeFiles/DimondParkour.dir/source/Convert.cpp.o.provides.build: CMakeFiles/Dim
 
 CMakeFiles/DimondParkour.dir/source/Client.cpp.o: CMakeFiles/DimondParkour.dir/flags.make
 CMakeFiles/DimondParkour.dir/source/Client.cpp.o: ../source/Client.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/DimondParkour.dir/source/Client.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DimondParkour.dir/source/Client.cpp.o -c /home/zrf/Desktop/DimondParkourServer/DimondParkourServer/source/Client.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zrf/桌面/DimondParkour/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/DimondParkour.dir/source/Client.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DimondParkour.dir/source/Client.cpp.o -c /home/zrf/桌面/DimondParkour/source/Client.cpp
 
 CMakeFiles/DimondParkour.dir/source/Client.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DimondParkour.dir/source/Client.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zrf/Desktop/DimondParkourServer/DimondParkourServer/source/Client.cpp > CMakeFiles/DimondParkour.dir/source/Client.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zrf/桌面/DimondParkour/source/Client.cpp > CMakeFiles/DimondParkour.dir/source/Client.cpp.i
 
 CMakeFiles/DimondParkour.dir/source/Client.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DimondParkour.dir/source/Client.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zrf/Desktop/DimondParkourServer/DimondParkourServer/source/Client.cpp -o CMakeFiles/DimondParkour.dir/source/Client.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zrf/桌面/DimondParkour/source/Client.cpp -o CMakeFiles/DimondParkour.dir/source/Client.cpp.s
 
 CMakeFiles/DimondParkour.dir/source/Client.cpp.o.requires:
 
@@ -203,16 +203,16 @@ CMakeFiles/DimondParkour.dir/source/Client.cpp.o.provides.build: CMakeFiles/Dimo
 
 CMakeFiles/DimondParkour.dir/source/GameLobby.cpp.o: CMakeFiles/DimondParkour.dir/flags.make
 CMakeFiles/DimondParkour.dir/source/GameLobby.cpp.o: ../source/GameLobby.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/DimondParkour.dir/source/GameLobby.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DimondParkour.dir/source/GameLobby.cpp.o -c /home/zrf/Desktop/DimondParkourServer/DimondParkourServer/source/GameLobby.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zrf/桌面/DimondParkour/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/DimondParkour.dir/source/GameLobby.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DimondParkour.dir/source/GameLobby.cpp.o -c /home/zrf/桌面/DimondParkour/source/GameLobby.cpp
 
 CMakeFiles/DimondParkour.dir/source/GameLobby.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DimondParkour.dir/source/GameLobby.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zrf/Desktop/DimondParkourServer/DimondParkourServer/source/GameLobby.cpp > CMakeFiles/DimondParkour.dir/source/GameLobby.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zrf/桌面/DimondParkour/source/GameLobby.cpp > CMakeFiles/DimondParkour.dir/source/GameLobby.cpp.i
 
 CMakeFiles/DimondParkour.dir/source/GameLobby.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DimondParkour.dir/source/GameLobby.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zrf/Desktop/DimondParkourServer/DimondParkourServer/source/GameLobby.cpp -o CMakeFiles/DimondParkour.dir/source/GameLobby.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zrf/桌面/DimondParkour/source/GameLobby.cpp -o CMakeFiles/DimondParkour.dir/source/GameLobby.cpp.s
 
 CMakeFiles/DimondParkour.dir/source/GameLobby.cpp.o.requires:
 
@@ -225,6 +225,30 @@ CMakeFiles/DimondParkour.dir/source/GameLobby.cpp.o.provides: CMakeFiles/DimondP
 CMakeFiles/DimondParkour.dir/source/GameLobby.cpp.o.provides.build: CMakeFiles/DimondParkour.dir/source/GameLobby.cpp.o
 
 
+CMakeFiles/DimondParkour.dir/source/CheckLobby.cpp.o: CMakeFiles/DimondParkour.dir/flags.make
+CMakeFiles/DimondParkour.dir/source/CheckLobby.cpp.o: ../source/CheckLobby.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zrf/桌面/DimondParkour/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/DimondParkour.dir/source/CheckLobby.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DimondParkour.dir/source/CheckLobby.cpp.o -c /home/zrf/桌面/DimondParkour/source/CheckLobby.cpp
+
+CMakeFiles/DimondParkour.dir/source/CheckLobby.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DimondParkour.dir/source/CheckLobby.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zrf/桌面/DimondParkour/source/CheckLobby.cpp > CMakeFiles/DimondParkour.dir/source/CheckLobby.cpp.i
+
+CMakeFiles/DimondParkour.dir/source/CheckLobby.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DimondParkour.dir/source/CheckLobby.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zrf/桌面/DimondParkour/source/CheckLobby.cpp -o CMakeFiles/DimondParkour.dir/source/CheckLobby.cpp.s
+
+CMakeFiles/DimondParkour.dir/source/CheckLobby.cpp.o.requires:
+
+.PHONY : CMakeFiles/DimondParkour.dir/source/CheckLobby.cpp.o.requires
+
+CMakeFiles/DimondParkour.dir/source/CheckLobby.cpp.o.provides: CMakeFiles/DimondParkour.dir/source/CheckLobby.cpp.o.requires
+	$(MAKE) -f CMakeFiles/DimondParkour.dir/build.make CMakeFiles/DimondParkour.dir/source/CheckLobby.cpp.o.provides.build
+.PHONY : CMakeFiles/DimondParkour.dir/source/CheckLobby.cpp.o.provides
+
+CMakeFiles/DimondParkour.dir/source/CheckLobby.cpp.o.provides.build: CMakeFiles/DimondParkour.dir/source/CheckLobby.cpp.o
+
+
 # Object files for target DimondParkour
 DimondParkour_OBJECTS = \
 "CMakeFiles/DimondParkour.dir/source/main.cpp.o" \
@@ -233,7 +257,8 @@ DimondParkour_OBJECTS = \
 "CMakeFiles/DimondParkour.dir/source/Message.cpp.o" \
 "CMakeFiles/DimondParkour.dir/source/Convert.cpp.o" \
 "CMakeFiles/DimondParkour.dir/source/Client.cpp.o" \
-"CMakeFiles/DimondParkour.dir/source/GameLobby.cpp.o"
+"CMakeFiles/DimondParkour.dir/source/GameLobby.cpp.o" \
+"CMakeFiles/DimondParkour.dir/source/CheckLobby.cpp.o"
 
 # External object files for target DimondParkour
 DimondParkour_EXTERNAL_OBJECTS =
@@ -245,9 +270,10 @@ DimondParkour: CMakeFiles/DimondParkour.dir/source/Message.cpp.o
 DimondParkour: CMakeFiles/DimondParkour.dir/source/Convert.cpp.o
 DimondParkour: CMakeFiles/DimondParkour.dir/source/Client.cpp.o
 DimondParkour: CMakeFiles/DimondParkour.dir/source/GameLobby.cpp.o
+DimondParkour: CMakeFiles/DimondParkour.dir/source/CheckLobby.cpp.o
 DimondParkour: CMakeFiles/DimondParkour.dir/build.make
 DimondParkour: CMakeFiles/DimondParkour.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable DimondParkour"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/zrf/桌面/DimondParkour/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable DimondParkour"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/DimondParkour.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -262,6 +288,7 @@ CMakeFiles/DimondParkour.dir/requires: CMakeFiles/DimondParkour.dir/source/Messa
 CMakeFiles/DimondParkour.dir/requires: CMakeFiles/DimondParkour.dir/source/Convert.cpp.o.requires
 CMakeFiles/DimondParkour.dir/requires: CMakeFiles/DimondParkour.dir/source/Client.cpp.o.requires
 CMakeFiles/DimondParkour.dir/requires: CMakeFiles/DimondParkour.dir/source/GameLobby.cpp.o.requires
+CMakeFiles/DimondParkour.dir/requires: CMakeFiles/DimondParkour.dir/source/CheckLobby.cpp.o.requires
 
 .PHONY : CMakeFiles/DimondParkour.dir/requires
 
@@ -270,6 +297,6 @@ CMakeFiles/DimondParkour.dir/clean:
 .PHONY : CMakeFiles/DimondParkour.dir/clean
 
 CMakeFiles/DimondParkour.dir/depend:
-	cd /home/zrf/Desktop/DimondParkourServer/DimondParkourServer/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/zrf/Desktop/DimondParkourServer/DimondParkourServer /home/zrf/Desktop/DimondParkourServer/DimondParkourServer /home/zrf/Desktop/DimondParkourServer/DimondParkourServer/cmake-build-debug /home/zrf/Desktop/DimondParkourServer/DimondParkourServer/cmake-build-debug /home/zrf/Desktop/DimondParkourServer/DimondParkourServer/cmake-build-debug/CMakeFiles/DimondParkour.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/zrf/桌面/DimondParkour/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/zrf/桌面/DimondParkour /home/zrf/桌面/DimondParkour /home/zrf/桌面/DimondParkour/cmake-build-debug /home/zrf/桌面/DimondParkour/cmake-build-debug /home/zrf/桌面/DimondParkour/cmake-build-debug/CMakeFiles/DimondParkour.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/DimondParkour.dir/depend
 

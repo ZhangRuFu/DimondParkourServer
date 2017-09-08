@@ -36,3 +36,9 @@ std::u16string SerializeStream::GetString(int index)
 {
     return m_info.substr(m_splitInfo[index].first, m_splitInfo[index].second);
 }
+
+int SerializeStream::GetFlag()
+{
+    if(m_info.size() != 0)
+        return m_info[0] - u'0';
+}

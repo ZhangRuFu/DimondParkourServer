@@ -13,8 +13,6 @@
 #define PORT 8888
 typedef unsigned char byte;
 
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wmissing-noreturn"
 int main() {
     //using namespace std;
     int res = 0;
@@ -27,26 +25,26 @@ int main() {
     serAddr.sin_family = AF_INET;
     serAddr.sin_port = htons(PORT);
 
-    res = bind(serSocket, (sockaddr*)&serAddr, sizeof(serAddr));
-    if(res == -1)
+    res = bind(serSocket, (sockaddr *) &serAddr, sizeof(serAddr));
+    if (res == -1)
         std::cout << "套接字绑定出错!" << std::endl;
     listen(serSocket, 10);
-    while(true)
-    {
+    while (true) {
         sockaddr_in clientAddr;
         socklen_t sockLen = sizeof(clientAddr);
-        int clientSock = accept(serSocket, (sockaddr*)&clientAddr, &sockLen);
+        int clientSock = accept(serSocket, (sockaddr *) &clientAddr, &sockLen);
 
         //新玩家加入
-        std::cout << "新玩家加入，客户端IP:" << inet_ntoa(clientAddr.sin_addr) << " 端口号:" << ntohs(clientAddr.sin_port) << std::endl;
+        std::cout << "新玩家加入，客户端IP:" << inet_ntoa(clientAddr.sin_addr) << " 端口号:" << ntohs(clientAddr.sin_port)
+                  << std::endl;
 
         //套接字资源属主转移
-        Client *newClient = new Client();
-        std::thread *t = new std::thread(*newClient, clientSock);
-        tm.Add(t);
+        Client *newClient = new Client(clientSock);
+
+        //加入审核大厅
+        CheckLobby::Instance()->Add(newClient);
     }
     close(serSocket);
     //自动释放线程资源
     return 0;
 }
-#pragma clang diagnostic pop

@@ -17,9 +17,10 @@ private:
 public:
     SerializeStream(char *buffer, int size);
 
-    int GetFiledCount(void){return m_splitInfo.size();}
+    int GetFieldCount(void){return m_splitInfo.size();}
     std::pair<int, int> GetPair(int index){return m_splitInfo[index];}
     std::u16string GetString(int index);
+    int GetFlag(void);
 
 private:
     void Split(void);

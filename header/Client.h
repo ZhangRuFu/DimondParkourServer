@@ -5,6 +5,7 @@
 #ifndef DIMONDPARKOUR_CLIENT_H
 #define DIMONDPARKOUR_CLIENT_H
 
+#include "Message.h"
 #include "Player.h"
 
 //抽象客户端
@@ -19,13 +20,15 @@ private:
     char m_buffer[BUFFERSIZE];             //数据缓冲
 
 public:
+    Client(int clientSocket) : m_clientSocket(clientSocket){}
     ~Client(void);
+
+    int GetClientSocket(void){return m_clientSocket;}
+
     //主循环
     void Update(void);
 
-    //线程入口函数
-    bool Init(void);
-    void operator()(int);
+    void Init(JoinMessage &message);
 };
 
 #endif //DIMONDPARKOUR_CLIENT_H
