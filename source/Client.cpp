@@ -15,6 +15,11 @@ bool Client::Init()
 {
     //JoinMessage
     int recvSize = read(m_clientSocket, m_buffer, BUFFERSIZE);
+    if(recvSize == -1)
+    {
+        perror("读取套接字发生错误!");
+        return false;
+    }
     m_buffer[recvSize] = 0;
     std::u16string str = Encoding::FromBytes(m_buffer);
     int messageType = str[0] - u'0';
@@ -43,8 +48,9 @@ void Client::Update()
     //2、开始游戏消息
 }
 
-void Client::operator()(void)
+void Client::operator()(int sockfd)
 {
+    m_clientSocket = sockfd;
     bool res = Init();
     if(!res)
         return;

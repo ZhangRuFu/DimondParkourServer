@@ -8,38 +8,38 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/zrf/桌面/DimondParkour/cmake-build-debug"/>
+				<Option working_dir="/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/zrf/桌面/DimondParkour/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zrf/桌面/DimondParkour/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/zrf/桌面/DimondParkour/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zrf/桌面/DimondParkour/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/zrf/桌面/DimondParkour/cmake-build-debug"/>
+				<Option working_dir="/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/zrf/桌面/DimondParkour/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zrf/桌面/DimondParkour/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/zrf/桌面/DimondParkour/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zrf/桌面/DimondParkour/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/zrf/桌面/DimondParkour/cmake-build-debug"/>
+				<Option working_dir="/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/zrf/桌面/DimondParkour/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zrf/桌面/DimondParkour/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/zrf/桌面/DimondParkour/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zrf/桌面/DimondParkour/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="DimondParkour">
-				<Option output="/home/zrf/桌面/DimondParkour/cmake-build-debug/DimondParkour" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/zrf/桌面/DimondParkour/cmake-build-debug"/>
+				<Option output="/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/cmake-build-debug/DimondParkour" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -54,15 +54,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/zrf/桌面/DimondParkour/cmake-build-debug/Makefile&quot;  VERBOSE=1 DimondParkour"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zrf/桌面/DimondParkour/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/zrf/桌面/DimondParkour/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zrf/桌面/DimondParkour/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/cmake-build-debug/Makefile&quot;  VERBOSE=1 DimondParkour"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="DimondParkour/fast">
-				<Option output="/home/zrf/桌面/DimondParkour/cmake-build-debug/DimondParkour" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/zrf/桌面/DimondParkour/cmake-build-debug"/>
+				<Option output="/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/cmake-build-debug/DimondParkour" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -77,53 +77,53 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/zrf/桌面/DimondParkour/cmake-build-debug/Makefile&quot;  VERBOSE=1 DimondParkour/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zrf/桌面/DimondParkour/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/zrf/桌面/DimondParkour/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zrf/桌面/DimondParkour/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/cmake-build-debug/Makefile&quot;  VERBOSE=1 DimondParkour/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/zrf/桌面/DimondParkour/header/Client.h">
+		<Unit filename="/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/header/Client.h">
 			<Option target="DimondParkour"/>
 		</Unit>
-		<Unit filename="/home/zrf/桌面/DimondParkour/header/Convert.h">
+		<Unit filename="/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/header/Convert.h">
 			<Option target="DimondParkour"/>
 		</Unit>
-		<Unit filename="/home/zrf/桌面/DimondParkour/header/Debug.h">
+		<Unit filename="/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/header/Debug.h">
 			<Option target="DimondParkour"/>
 		</Unit>
-		<Unit filename="/home/zrf/桌面/DimondParkour/header/GameLobby.h">
+		<Unit filename="/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/header/GameLobby.h">
 			<Option target="DimondParkour"/>
 		</Unit>
-		<Unit filename="/home/zrf/桌面/DimondParkour/header/Player.h">
+		<Unit filename="/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/header/Player.h">
 			<Option target="DimondParkour"/>
 		</Unit>
-		<Unit filename="/home/zrf/桌面/DimondParkour/header/ThreadManager.h">
+		<Unit filename="/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/header/ThreadManager.h">
 			<Option target="DimondParkour"/>
 		</Unit>
-		<Unit filename="/home/zrf/桌面/DimondParkour/source/Client.cpp">
+		<Unit filename="/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/source/Client.cpp">
 			<Option target="DimondParkour"/>
 		</Unit>
-		<Unit filename="/home/zrf/桌面/DimondParkour/source/Convert.cpp">
+		<Unit filename="/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/source/Convert.cpp">
 			<Option target="DimondParkour"/>
 		</Unit>
-		<Unit filename="/home/zrf/桌面/DimondParkour/source/Encoding.cpp">
+		<Unit filename="/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/source/Encoding.cpp">
 			<Option target="DimondParkour"/>
 		</Unit>
-		<Unit filename="/home/zrf/桌面/DimondParkour/source/GameLobby.cpp">
+		<Unit filename="/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/source/GameLobby.cpp">
 			<Option target="DimondParkour"/>
 		</Unit>
-		<Unit filename="/home/zrf/桌面/DimondParkour/source/Message.cpp">
+		<Unit filename="/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/source/Message.cpp">
 			<Option target="DimondParkour"/>
 		</Unit>
-		<Unit filename="/home/zrf/桌面/DimondParkour/source/SerializeStream.cpp">
+		<Unit filename="/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/source/SerializeStream.cpp">
 			<Option target="DimondParkour"/>
 		</Unit>
-		<Unit filename="/home/zrf/桌面/DimondParkour/source/main.cpp">
+		<Unit filename="/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/source/main.cpp">
 			<Option target="DimondParkour"/>
 		</Unit>
-		<Unit filename="/home/zrf/桌面/DimondParkour/CMakeLists.txt">
+		<Unit filename="/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

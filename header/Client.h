@@ -13,20 +13,19 @@
 class Client
 {
 private:
-    int m_clientSocket;             //与客户端通信的套接字
+    int m_clientSocket = 0;             //与客户端通信的套接字
     Player *m_player;               //客户端逻辑信息数据
     static const int BUFFERSIZE = 256;
     char m_buffer[BUFFERSIZE];             //数据缓冲
 
 public:
-    Client(int clientSocket) : m_clientSocket(clientSocket){}
     ~Client(void);
     //主循环
     void Update(void);
 
     //线程入口函数
     bool Init(void);
-    void operator()(void);
+    void operator()(int);
 };
 
 #endif //DIMONDPARKOUR_CLIENT_H

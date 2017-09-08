@@ -38,14 +38,14 @@ int main() {
         int clientSock = accept(serSocket, (sockaddr*)&clientAddr, &sockLen);
 
         //新玩家加入
-        std::cout << "客户端IP:" << inet_ntoa(clientAddr.sin_addr) << " 端口号:" << ntohs(clientAddr.sin_port) << std::endl;
+        std::cout << "新玩家加入，客户端IP:" << inet_ntoa(clientAddr.sin_addr) << " 端口号:" << ntohs(clientAddr.sin_port) << std::endl;
 
         //套接字资源属主转移
-        Client *newClient = new Client(clientSock);
-        std::thread *t = new std::thread(*newClient);
+        Client *newClient = new Client();
+        std::thread *t = new std::thread(*newClient, clientSock);
+        tm.Add(t);
     }
     close(serSocket);
-
     //自动释放线程资源
     return 0;
 }
