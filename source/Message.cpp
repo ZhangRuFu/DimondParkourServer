@@ -53,3 +53,18 @@ int ChatMessage::Deserialize(SerializeStream &stream)
     return index;
 }
 
+//==========================FightMessage=======================
+std::string FightMessage::Serialize()
+{
+    return Message::Serialize() + " " + Encoding::ToBytes(m_uid.data()) + " " + Encoding::ToBytes(m_name.data());
+}
+
+int FightMessage::Deserialize(SerializeStream &stream)
+{
+    int index = Message::Deserialize(stream);
+    ++index;
+    m_uid = stream.GetString(index);
+    ++index;
+    m_name = stream.GetString(index);
+    return index;
+}

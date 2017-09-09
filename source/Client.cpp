@@ -17,13 +17,6 @@ void Client::Init(JoinMessage &message)
     m_player = new Player(message.GetUID());
 }
 
-void Client::Update()
-{
-    //等待接收消息
-    //1、商店消息
-    //2、开始游戏消息
-}
-
 //资源释放
 Client::~Client()
 {

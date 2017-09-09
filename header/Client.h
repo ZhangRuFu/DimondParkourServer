@@ -15,18 +15,14 @@ class Client
 {
 private:
     int m_clientSocket = 0;             //与客户端通信的套接字
-    Player *m_player;               //客户端逻辑信息数据
-    static const int BUFFERSIZE = 256;
-    char m_buffer[BUFFERSIZE];             //数据缓冲
+    Player *m_player;                   //客户端逻辑信息数据
 
 public:
     Client(int clientSocket) : m_clientSocket(clientSocket){}
     ~Client(void);
 
     int GetClientSocket(void){return m_clientSocket;}
-
-    //主循环
-    void Update(void);
+    Player* GetPlayer(void) {return m_player;}
 
     void Init(JoinMessage &message);
 };

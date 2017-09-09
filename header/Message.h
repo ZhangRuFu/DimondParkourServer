@@ -12,7 +12,7 @@ class SerializeStream;
 class Message
 {
 public:
-    enum MessageType{Join, Chat};
+    enum MessageType{Join, Chat, StartGame, StartShop, Fight, Position, GameOver, GameWin};
 
 private:
     MessageType m_type;
@@ -60,14 +60,39 @@ public:
     virtual std::string Serialize(void);
 };
 
-//开始游戏消息
+//对战消息
+class FightMessage : public Message
+{
+private:
+    std::u16string m_uid;       //对手UID
+    std::u16string m_name;      //对手姓名
 
+public:
+    FightMessage(void) : Message(Message::MessageType::Fight){}
+
+    void SetFightInfo(std::u16string uid, std::u16string name) {m_uid = uid, m_name = name;}
+    std::u16string GetFightUID(void){return m_uid;}
+    std::u16string GetFightName(void) {return m_name;}
+
+    virtual int Deserialize(SerializeStream &stream);
+    virtual std::string Serialize(void);
+};
 
 //游戏逻辑消息（位置同步）
+class PositionMessage : public Message
+{
+private:
+    int m_x, m_y;
 
+public:
+    PositionMessage(void) : Message(Message::MessageType::Position){}
 
+    void SetPosition(int x, int y){m_x = x, m_y = y;}
+    int GetX(void) { return m_x; }
+    int GetY(void) { return m_y; }
 
-//进入商店消息
-
+    virtual int Deserialize(SerializeStream &stream);
+    virtual std::string Serialize(void);
+};
 
 #endif //DIMONDPARKOUR_MESSAGE_H

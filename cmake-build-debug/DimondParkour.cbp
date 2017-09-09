@@ -99,6 +99,9 @@
 		<Unit filename="/home/zrf/桌面/DimondParkour/header/GameLobby.h">
 			<Option target="DimondParkour"/>
 		</Unit>
+		<Unit filename="/home/zrf/桌面/DimondParkour/header/GameRoom.h">
+			<Option target="DimondParkour"/>
+		</Unit>
 		<Unit filename="/home/zrf/桌面/DimondParkour/header/Player.h">
 			<Option target="DimondParkour"/>
 		</Unit>
@@ -118,6 +121,9 @@
 			<Option target="DimondParkour"/>
 		</Unit>
 		<Unit filename="/home/zrf/桌面/DimondParkour/source/GameLobby.cpp">
+			<Option target="DimondParkour"/>
+		</Unit>
+		<Unit filename="/home/zrf/桌面/DimondParkour/source/GameRoom.cpp">
 			<Option target="DimondParkour"/>
 		</Unit>
 		<Unit filename="/home/zrf/桌面/DimondParkour/source/Message.cpp">

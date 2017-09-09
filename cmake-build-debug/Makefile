@@ -258,6 +258,33 @@ source/GameLobby.cpp.s:
 	$(MAKE) -f CMakeFiles/DimondParkour.dir/build.make CMakeFiles/DimondParkour.dir/source/GameLobby.cpp.s
 .PHONY : source/GameLobby.cpp.s
 
+source/GameRoom.o: source/GameRoom.cpp.o
+
+.PHONY : source/GameRoom.o
+
+# target to build an object file
+source/GameRoom.cpp.o:
+	$(MAKE) -f CMakeFiles/DimondParkour.dir/build.make CMakeFiles/DimondParkour.dir/source/GameRoom.cpp.o
+.PHONY : source/GameRoom.cpp.o
+
+source/GameRoom.i: source/GameRoom.cpp.i
+
+.PHONY : source/GameRoom.i
+
+# target to preprocess a source file
+source/GameRoom.cpp.i:
+	$(MAKE) -f CMakeFiles/DimondParkour.dir/build.make CMakeFiles/DimondParkour.dir/source/GameRoom.cpp.i
+.PHONY : source/GameRoom.cpp.i
+
+source/GameRoom.s: source/GameRoom.cpp.s
+
+.PHONY : source/GameRoom.s
+
+# target to generate assembly for a file
+source/GameRoom.cpp.s:
+	$(MAKE) -f CMakeFiles/DimondParkour.dir/build.make CMakeFiles/DimondParkour.dir/source/GameRoom.cpp.s
+.PHONY : source/GameRoom.cpp.s
+
 source/Message.o: source/Message.cpp.o
 
 .PHONY : source/Message.o
@@ -363,6 +390,9 @@ help:
 	@echo "... source/GameLobby.o"
 	@echo "... source/GameLobby.i"
 	@echo "... source/GameLobby.s"
+	@echo "... source/GameRoom.o"
+	@echo "... source/GameRoom.i"
+	@echo "... source/GameRoom.s"
 	@echo "... source/Message.o"
 	@echo "... source/Message.i"
 	@echo "... source/Message.s"

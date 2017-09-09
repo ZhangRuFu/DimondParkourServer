@@ -68,9 +68,4 @@ void CheckLobby::Update()
     }
 }
 
-CheckLobby* CheckLobby::Instance(void)
-{
-    return m_instance;
-}
-
 CheckLobby *CheckLobby::m_instance = CheckLobby::Init();
