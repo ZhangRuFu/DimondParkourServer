@@ -21,7 +21,7 @@ public:
         //开辟游戏大厅线程
         std::thread *LobbyThread = new std::thread(GameLobbyThread);
         Add(LobbyThread);
-        std::thread *CheckThread = new std::thread(GameLobbyThread);
+        std::thread *CheckThread = new std::thread(CheckLobbyThread);
         Add(CheckThread);
     }
 

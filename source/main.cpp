@@ -27,7 +27,10 @@ int main() {
 
     res = bind(serSocket, (sockaddr *) &serAddr, sizeof(serAddr));
     if (res == -1)
+    {
         std::cout << "套接字绑定出错!" << std::endl;
+        return 1;
+    }
     listen(serSocket, 10);
     while (true) {
         sockaddr_in clientAddr;

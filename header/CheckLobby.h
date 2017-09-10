@@ -16,11 +16,12 @@ class CheckLobby
 private:
     std::vector<pollfd> m_pollfdVector;
     std::map<int, Client*> m_clientMap;
+    int m_conSock;                      //线程间通信套接字
 
     static CheckLobby *m_instance;
 
 private:
-    CheckLobby(){}
+    CheckLobby();
     static CheckLobby* Init(void);
 
 public:

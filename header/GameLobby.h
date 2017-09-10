@@ -29,8 +29,11 @@ private:
     std::map<int, Client*> m_lobby;
     static GameLobby* m_instance;
 
+    //线程间通信
+    int m_conSock;
+
 private:
-    GameLobby(){}
+    GameLobby();
 
 public:
     void JoinLobby(Client *newPlayer);

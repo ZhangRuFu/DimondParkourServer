@@ -4,6 +4,7 @@
 
 #include <unistd.h>
 #include <thread>
+#include <sys/eventfd.h>
 #include "../header/GameLobby.h"
 #include "../header/Debug.h"
 #include "../header/SerializeStream.h"
@@ -22,13 +23,18 @@ void GameLobby::JoinLobby(Client *newPlayer)
         return;
 
     //新玩家加入大厅
+    Debug::Log("新客户端加入游戏大厅");
     pollfd pf;
     pf.fd = newPlayer->GetClientSocket();
     pf.events = POLLRDNORM;
     pf.revents = 0;
     m_lobby[pf.fd] = newPlayer;
     m_pollVector.push_back(pf);
-    Debug::Log("新客户端加入");
+
+    //中断poll
+    uint64_t buffer = 1;
+    write(m_conSock, &buffer, sizeof(uint64_t));
+
 }
 
 void GameLobby::Update()
@@ -37,12 +43,23 @@ void GameLobby::Update()
     char buffer[1024];
     while(true)
     {
+        if(m_pollVector.size() == 0)
+            continue;
         int readableCount = poll(m_pollVector.data(), m_pollVector.size(), -1);
         std::vector<pollfd>::iterator i = m_pollVector.begin();
         while(i < m_pollVector.end())
         {
             if(i->revents == 0)
                 continue;
+
+            if(i->fd == m_conSock)
+            {
+                //线程通信
+                uint64_t buffer;
+                read(i->fd, &buffer, sizeof(uint64_t));
+                --readableCount;
+                ++i;
+            }
 
             int res = read(i->fd, buffer, 1024);
             buffer[res] = 0;
@@ -55,12 +72,14 @@ void GameLobby::Update()
             //加入游戏消息
             if(mType == Message::MessageType::StartGame)
             {
+                Debug::Log("收到开始游戏消息");
                 //转入游戏匹配队列
                 Client *c = m_lobby[i->fd];
                 m_lobby.erase(i->fd);
                 if(m_readyGame.size() > 1)
                 {
                     //匹配成功
+                    Debug::Log("匹配成功");
                     Client *c2 = m_readyGame.front();
                     //创建游戏房间
                     CreateGameRoom(c, c2);
@@ -73,6 +92,7 @@ void GameLobby::Update()
                 else
                 {
                     //没有可匹配玩家，入队列等待
+                    Debug::Log("加入队列等候匹配");
                     m_readyGame.push(c);
                     ++i;
                 }
@@ -95,6 +115,15 @@ void GameLobby::CreateGameRoom(Client *c1, Client *c2)
     m_gameRooms.push_back(room);
     std::thread *t = new std::thread(GameRoom::GameRoomThread, room);
     m_roomThreads.push_back(t);
+}
+
+GameLobby::GameLobby()
+{
+    m_conSock = eventfd(0, 0);
+    pollfd conFd;
+    conFd.fd = m_conSock;
+    conFd.events = POLLRDNORM;
+    m_pollVector.push_back(conFd);
 }
 
 GameLobby *GameLobby::m_instance = GameLobby::Init();

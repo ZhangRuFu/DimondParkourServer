@@ -8,9 +8,11 @@
 #include "../header/SerializeStream.h"
 #include "../header/Encoding.h"
 #include "../header/Message.h"
+#include "../header/Debug.h"
 
 GameRoom::GameRoom(Client *c1, Client *c2)
 {
+    Debug::Log("新房间创建");
     m_client[0] = c1;
     m_client[1] = c2;
 
