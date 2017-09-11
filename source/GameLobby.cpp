@@ -68,43 +68,43 @@ void GameLobby::Update()
             SerializeStream ss(buffer, res);
             int mType = ss.GetFlag();
 
-            //==============================是否可以使用状态机模式？======================
             //加入游戏消息
             if(mType == Message::MessageType::StartGame)
             {
                 Debug::Log("收到开始游戏消息");
-                //转入游戏匹配队列
+
+                //===============================交给Client处理消息===========================
                 Client *c = m_lobby[i->fd];
                 m_lobby.erase(i->fd);
-                if(m_readyGame.size() > 1)
-                {
-                    //匹配成功
-                    Debug::Log("匹配成功");
-                    Client *c2 = m_readyGame.front();
-                    //创建游戏房间
-                    CreateGameRoom(c, c2);
 
-                    //从大厅剔除
-                    m_readyGame.pop();
-                    m_lobby.erase(i->fd);
-                    i = m_pollVector.erase(i);
-                }
-                else
-                {
-                    //没有可匹配玩家，入队列等待
-                    Debug::Log("加入队列等候匹配");
-                    m_readyGame.push(c);
-                    ++i;
-                }
-            }//进入商店消息
-            else if(mType == Message::MessageType::StartShop)
-            {
-                //...
             }
             --readableCount;
             if(readableCount == 0)
                 break;
         }
+    }
+}
+
+void GameLobby::StartGame(Client *client)
+{
+    if(m_readyGame.size() > 1)
+    {
+        //匹配成功
+        Debug::Log("匹配成功");
+        Client *c2 = m_readyGame.front();
+        //创建游戏房间
+        CreateGameRoom(client, c2);
+
+        //从大厅剔除
+        m_readyGame.pop();
+        Leave(client);
+        Leave(c2);
+    }
+    else
+    {
+        //没有可匹配玩家，入队列等待
+        Debug::Log("加入队列等候匹配");
+        m_readyGame.push(client);
     }
 }
 
@@ -115,6 +115,13 @@ void GameLobby::CreateGameRoom(Client *c1, Client *c2)
     m_gameRooms.push_back(room);
     std::thread *t = new std::thread(GameRoom::GameRoomThread, room);
     m_roomThreads.push_back(t);
+}
+
+void GameLobby::Leave(Client *client)
+{
+    //=========================标记客户端已离开，在下一次更新时移除========================
+    m_lobby.erase(i->fd);
+    i = m_pollVector.erase(i);
 }
 
 GameLobby::GameLobby()

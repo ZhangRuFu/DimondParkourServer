@@ -10,17 +10,31 @@
 #include <iostream>
 #include <string>
 
-void Client::Init(JoinMessage &message)
-{
-    //建立Player
-    //==================================根据UID查用户信息========================
-    m_player = new Player(message.GetUID());
-}
-
 //资源释放
 Client::~Client()
 {
     //===========================Player应该进行数据持久化===============================
     delete m_player;
     close(m_clientSocket);
+}
+
+void Client::AcceptMessage(std::vector &messages)
+{
+    for(int i = 0; i < messages.size(); ++i)
+    {
+        State *s = m_state->Execute(messages[i]);
+        //状态迁移
+        if(s != nullptr)
+            ChangeState(s);
+    }
+}
+
+void Client::ChangeState(State *newState)
+{
+    if(newState == nullptr)
+        return;
+    m_state->Quit();
+    delete m_state;
+    m_state = newState;
+    m_state->Enter();
 }

@@ -45,7 +45,7 @@ int main() {
         Client *newClient = new Client(clientSock);
 
         //加入审核大厅
-        CheckLobby::Instance()->Add(newClient);
+        GameLobby::Instance()->JoinLobby(newClient);
     }
     close(serSocket);
     //自动释放线程资源

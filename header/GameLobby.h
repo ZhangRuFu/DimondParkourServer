@@ -34,13 +34,17 @@ private:
 
 private:
     GameLobby();
+    void CreateGameRoom(Client *c1, Client *c2);
 
 public:
-    void JoinLobby(Client *newPlayer);
     //游戏大厅循环
     void Update(void);
+
+    void JoinLobby(Client *newPlayer);
+    void StartGame(Client *client);
+    void Leave(Client *client);
+
     int Count(void) {return m_lobby.size();}
-    void CreateGameRoom(Client *c1, Client *c2);
 
     //单例
     static GameLobby* Instance(void){return m_instance;}

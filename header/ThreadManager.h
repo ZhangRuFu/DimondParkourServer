@@ -8,7 +8,6 @@
 #include <vector>
 #include <thread>
 #include "../header/GameLobby.h"
-#include "../header/CheckLobby.h"
 
 class ThreadManager
 {
@@ -21,8 +20,6 @@ public:
         //开辟游戏大厅线程
         std::thread *LobbyThread = new std::thread(GameLobbyThread);
         Add(LobbyThread);
-        std::thread *CheckThread = new std::thread(CheckLobbyThread);
-        Add(CheckThread);
     }
 
     void Add(std::thread *newThread){m_threads.push_back(newThread);}
@@ -42,11 +39,6 @@ private:
     static void GameLobbyThread(void)
     {
         GameLobby::Instance()->Update();
-    }
-
-    static void CheckLobbyThread(void)
-    {
-        CheckLobby::Instance()->Update();
     }
 };
 
