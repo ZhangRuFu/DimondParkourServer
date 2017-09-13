@@ -9,6 +9,8 @@
 #include "../header/Encoding.h"
 #include "../header/Message.h"
 #include "../header/Debug.h"
+#include "../header/SocketUtility.h"
+#include "../header/Client.h"
 
 GameRoom::GameRoom(Client *c1, Client *c2)
 {
@@ -17,18 +19,20 @@ GameRoom::GameRoom(Client *c1, Client *c2)
     m_client[1] = c2;
 
     //发送房间信息
-    char buffer[128];
+    std::vector<Message*> ms;
     FightMessage fm;
     Player *p = m_client[0]->GetPlayer();
-    int cSocket = m_client[1]->GetClientSocket();
+    Client *client = m_client[1];
     fm.SetFightInfo(p->GetUID(), p->GetName());
-    //发送对手信息
-    write(cSocket, buffer, sizeof(buffer));
+    ms.push_back(&fm);
+    client->AcceptMessage(ms);
+    client->EnterGameRoom(this);
 
     p = m_client[1]->GetPlayer();
-    cSocket = m_client[0]->GetClientSocket();
+    client = m_client[0];
     fm.SetFightInfo(p->GetUID(), p->GetName());
-    write(cSocket, buffer, sizeof(buffer));
+    client->AcceptMessage(ms);
+    client->EnterGameRoom(this);
 }
 
 void GameRoom::Update()
@@ -42,8 +46,9 @@ void GameRoom::Update()
         pfd[i].revents = 0;
     }
 
+    SerializeStream ss;
     //同步玩家操作信息
-    while(true)
+    while(m_gaming)
     {
         int readyCount = poll(pfd, 2, -1);
         for(int i = 0; i < 2; ++i)
@@ -56,21 +61,12 @@ void GameRoom::Update()
             m_buffer[readyCount] = 0;
 
             int another = i == 0 ? 1 : 0;
-            //校验信息
-            SerializeStream ss(m_buffer, recvCount);
-            int mType = ss.GetFlag();
-            if(mType == Message::MessageType::Position)
-            {
-                //操作同步到另一玩家
-                write(pfd[another].fd, m_buffer, recvCount);
-            }
-            else if(mType == Message::MessageType::GameOver)
-            {
-                //一方玩家游戏结束
-                Message m(Message::MessageType::GameWin);
-                std::string data = m.Serialize();
-                write(pfd[another].fd, data.data(), data.size());
-            }
+
+            ss.AcceptStream(m_buffer, readyCount);
+            std::vector<Message*> &m = ss.GetMessages();
+
+
+            m_client[another]->AcceptMessage(m);
 
             --readyCount;
             if(readyCount == 0)
@@ -78,9 +74,30 @@ void GameRoom::Update()
         }
     }
 
+    //游戏结束
+}
+
+void GameRoom::SynchronizePosition(PositionMessage &message, Client *client)
+{
+    Client *another = (client == m_client[0] ? m_client[1] : m_client[0]);
+    SocketUtility::SendMessage(another->GetClientSocket(), message);
+}
+
+void GameRoom::GameOver(Client *client)
+{
+    //告知另一方游戏胜利
+    Client *another = (client == m_client[0] ? m_client[1] : m_client[0]);
+    Message message(Message::MessageType::GameWin);
+    std::vector<Message*> ms;
+    ms.push_back(&message);
+    another->AcceptMessage(ms);
+
+    //解散游戏房间
+    m_gaming = false;
 }
 
 void GameRoom::GameRoomThread(GameRoom *room)
 {
     room->Update();
+    delete room;
 }

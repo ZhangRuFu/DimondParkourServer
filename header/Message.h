@@ -25,6 +25,7 @@ public:
     virtual int Deserialize(SerializeStream &stream);
     virtual std::string Serialize(void);
 
+
 };
 
 //加入游戏消息
@@ -78,18 +79,17 @@ public:
     virtual std::string Serialize(void);
 };
 
-//游戏逻辑消息（位置同步）
+//游戏逻辑消息（位置同步-操作同步）
 class PositionMessage : public Message
 {
 private:
-    int m_x, m_y;
+    char m_operation;       //左还是右
 
 public:
     PositionMessage(void) : Message(Message::MessageType::Position){}
 
-    void SetPosition(int x, int y){m_x = x, m_y = y;}
-    int GetX(void) { return m_x; }
-    int GetY(void) { return m_y; }
+    void SetOperation(char operation){m_operation = operation;}
+    int GetOperation(void) { return m_operation; }
 
     virtual int Deserialize(SerializeStream &stream);
     virtual std::string Serialize(void);

@@ -15,6 +15,7 @@ private:
 public:
     static std::string ToBytes(const char16_t *utf16Str);    //UTF-16至UTF-8
     static std::u16string FromBytes(const char *utf8Str);    //UTF-8至UTF-16
+    static std::u16string FromBytes(const char *strStart, const char *strEnd);
 };
 
 #endif //DIMONDPARKOUR_ENCODING_H

@@ -5,6 +5,8 @@
 #ifndef DIMONDPARKOUR_STATE_H
 #define DIMONDPARKOUR_STATE_H
 
+#include "GameRoom.h"
+
 class Client;
 class Message;
 
@@ -45,10 +47,15 @@ public:
 //游戏状态
 class GameState : public State
 {
+private:
+    GameRoom *m_room;
+
 public:
     GameState(Client *client) : State(client){}
+    void EnterRoom(GameRoom *room){m_room= room;}
     virtual void Enter(void);
     virtual State* Execute(Message &message);
     virtual void Quit(void);
 };
+
 #endif //DIMONDPARKOUR_STATE_H

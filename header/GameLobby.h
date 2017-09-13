@@ -19,8 +19,10 @@
 class GameLobby
 {
 private:
+    //游戏房间
     std::list<GameRoom*> m_gameRooms;
     std::list<std::thread*> m_roomThreads;
+
     //准备开始队列
     std::queue<Client*> m_readyGame;
 
@@ -28,6 +30,9 @@ private:
     std::vector<pollfd> m_pollVector;
     std::map<int, Client*> m_lobby;
     static GameLobby* m_instance;
+
+    //清理队列
+    std::vector<Client*> m_leaveClient;
 
     //线程间通信
     int m_conSock;

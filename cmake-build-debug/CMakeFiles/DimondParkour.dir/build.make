@@ -225,33 +225,9 @@ CMakeFiles/DimondParkour.dir/source/GameLobby.cpp.o.provides: CMakeFiles/DimondP
 CMakeFiles/DimondParkour.dir/source/GameLobby.cpp.o.provides.build: CMakeFiles/DimondParkour.dir/source/GameLobby.cpp.o
 
 
-CMakeFiles/DimondParkour.dir/source/CheckLobby.cpp.o: CMakeFiles/DimondParkour.dir/flags.make
-CMakeFiles/DimondParkour.dir/source/CheckLobby.cpp.o: ../source/CheckLobby.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zrf/桌面/DimondParkour/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/DimondParkour.dir/source/CheckLobby.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DimondParkour.dir/source/CheckLobby.cpp.o -c /home/zrf/桌面/DimondParkour/source/CheckLobby.cpp
-
-CMakeFiles/DimondParkour.dir/source/CheckLobby.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DimondParkour.dir/source/CheckLobby.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zrf/桌面/DimondParkour/source/CheckLobby.cpp > CMakeFiles/DimondParkour.dir/source/CheckLobby.cpp.i
-
-CMakeFiles/DimondParkour.dir/source/CheckLobby.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DimondParkour.dir/source/CheckLobby.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zrf/桌面/DimondParkour/source/CheckLobby.cpp -o CMakeFiles/DimondParkour.dir/source/CheckLobby.cpp.s
-
-CMakeFiles/DimondParkour.dir/source/CheckLobby.cpp.o.requires:
-
-.PHONY : CMakeFiles/DimondParkour.dir/source/CheckLobby.cpp.o.requires
-
-CMakeFiles/DimondParkour.dir/source/CheckLobby.cpp.o.provides: CMakeFiles/DimondParkour.dir/source/CheckLobby.cpp.o.requires
-	$(MAKE) -f CMakeFiles/DimondParkour.dir/build.make CMakeFiles/DimondParkour.dir/source/CheckLobby.cpp.o.provides.build
-.PHONY : CMakeFiles/DimondParkour.dir/source/CheckLobby.cpp.o.provides
-
-CMakeFiles/DimondParkour.dir/source/CheckLobby.cpp.o.provides.build: CMakeFiles/DimondParkour.dir/source/CheckLobby.cpp.o
-
-
 CMakeFiles/DimondParkour.dir/source/GameRoom.cpp.o: CMakeFiles/DimondParkour.dir/flags.make
 CMakeFiles/DimondParkour.dir/source/GameRoom.cpp.o: ../source/GameRoom.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zrf/桌面/DimondParkour/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/DimondParkour.dir/source/GameRoom.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zrf/桌面/DimondParkour/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/DimondParkour.dir/source/GameRoom.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DimondParkour.dir/source/GameRoom.cpp.o -c /home/zrf/桌面/DimondParkour/source/GameRoom.cpp
 
 CMakeFiles/DimondParkour.dir/source/GameRoom.cpp.i: cmake_force
@@ -275,7 +251,7 @@ CMakeFiles/DimondParkour.dir/source/GameRoom.cpp.o.provides.build: CMakeFiles/Di
 
 CMakeFiles/DimondParkour.dir/source/State.cpp.o: CMakeFiles/DimondParkour.dir/flags.make
 CMakeFiles/DimondParkour.dir/source/State.cpp.o: ../source/State.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zrf/桌面/DimondParkour/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/DimondParkour.dir/source/State.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zrf/桌面/DimondParkour/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/DimondParkour.dir/source/State.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DimondParkour.dir/source/State.cpp.o -c /home/zrf/桌面/DimondParkour/source/State.cpp
 
 CMakeFiles/DimondParkour.dir/source/State.cpp.i: cmake_force
@@ -297,6 +273,30 @@ CMakeFiles/DimondParkour.dir/source/State.cpp.o.provides: CMakeFiles/DimondParko
 CMakeFiles/DimondParkour.dir/source/State.cpp.o.provides.build: CMakeFiles/DimondParkour.dir/source/State.cpp.o
 
 
+CMakeFiles/DimondParkour.dir/source/SocketUtility.cpp.o: CMakeFiles/DimondParkour.dir/flags.make
+CMakeFiles/DimondParkour.dir/source/SocketUtility.cpp.o: ../source/SocketUtility.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zrf/桌面/DimondParkour/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/DimondParkour.dir/source/SocketUtility.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DimondParkour.dir/source/SocketUtility.cpp.o -c /home/zrf/桌面/DimondParkour/source/SocketUtility.cpp
+
+CMakeFiles/DimondParkour.dir/source/SocketUtility.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DimondParkour.dir/source/SocketUtility.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zrf/桌面/DimondParkour/source/SocketUtility.cpp > CMakeFiles/DimondParkour.dir/source/SocketUtility.cpp.i
+
+CMakeFiles/DimondParkour.dir/source/SocketUtility.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DimondParkour.dir/source/SocketUtility.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zrf/桌面/DimondParkour/source/SocketUtility.cpp -o CMakeFiles/DimondParkour.dir/source/SocketUtility.cpp.s
+
+CMakeFiles/DimondParkour.dir/source/SocketUtility.cpp.o.requires:
+
+.PHONY : CMakeFiles/DimondParkour.dir/source/SocketUtility.cpp.o.requires
+
+CMakeFiles/DimondParkour.dir/source/SocketUtility.cpp.o.provides: CMakeFiles/DimondParkour.dir/source/SocketUtility.cpp.o.requires
+	$(MAKE) -f CMakeFiles/DimondParkour.dir/build.make CMakeFiles/DimondParkour.dir/source/SocketUtility.cpp.o.provides.build
+.PHONY : CMakeFiles/DimondParkour.dir/source/SocketUtility.cpp.o.provides
+
+CMakeFiles/DimondParkour.dir/source/SocketUtility.cpp.o.provides.build: CMakeFiles/DimondParkour.dir/source/SocketUtility.cpp.o
+
+
 # Object files for target DimondParkour
 DimondParkour_OBJECTS = \
 "CMakeFiles/DimondParkour.dir/source/main.cpp.o" \
@@ -306,9 +306,9 @@ DimondParkour_OBJECTS = \
 "CMakeFiles/DimondParkour.dir/source/Convert.cpp.o" \
 "CMakeFiles/DimondParkour.dir/source/Client.cpp.o" \
 "CMakeFiles/DimondParkour.dir/source/GameLobby.cpp.o" \
-"CMakeFiles/DimondParkour.dir/source/CheckLobby.cpp.o" \
 "CMakeFiles/DimondParkour.dir/source/GameRoom.cpp.o" \
-"CMakeFiles/DimondParkour.dir/source/State.cpp.o"
+"CMakeFiles/DimondParkour.dir/source/State.cpp.o" \
+"CMakeFiles/DimondParkour.dir/source/SocketUtility.cpp.o"
 
 # External object files for target DimondParkour
 DimondParkour_EXTERNAL_OBJECTS =
@@ -320,9 +320,9 @@ DimondParkour: CMakeFiles/DimondParkour.dir/source/Message.cpp.o
 DimondParkour: CMakeFiles/DimondParkour.dir/source/Convert.cpp.o
 DimondParkour: CMakeFiles/DimondParkour.dir/source/Client.cpp.o
 DimondParkour: CMakeFiles/DimondParkour.dir/source/GameLobby.cpp.o
-DimondParkour: CMakeFiles/DimondParkour.dir/source/CheckLobby.cpp.o
 DimondParkour: CMakeFiles/DimondParkour.dir/source/GameRoom.cpp.o
 DimondParkour: CMakeFiles/DimondParkour.dir/source/State.cpp.o
+DimondParkour: CMakeFiles/DimondParkour.dir/source/SocketUtility.cpp.o
 DimondParkour: CMakeFiles/DimondParkour.dir/build.make
 DimondParkour: CMakeFiles/DimondParkour.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/zrf/桌面/DimondParkour/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable DimondParkour"
@@ -340,9 +340,9 @@ CMakeFiles/DimondParkour.dir/requires: CMakeFiles/DimondParkour.dir/source/Messa
 CMakeFiles/DimondParkour.dir/requires: CMakeFiles/DimondParkour.dir/source/Convert.cpp.o.requires
 CMakeFiles/DimondParkour.dir/requires: CMakeFiles/DimondParkour.dir/source/Client.cpp.o.requires
 CMakeFiles/DimondParkour.dir/requires: CMakeFiles/DimondParkour.dir/source/GameLobby.cpp.o.requires
-CMakeFiles/DimondParkour.dir/requires: CMakeFiles/DimondParkour.dir/source/CheckLobby.cpp.o.requires
 CMakeFiles/DimondParkour.dir/requires: CMakeFiles/DimondParkour.dir/source/GameRoom.cpp.o.requires
 CMakeFiles/DimondParkour.dir/requires: CMakeFiles/DimondParkour.dir/source/State.cpp.o.requires
+CMakeFiles/DimondParkour.dir/requires: CMakeFiles/DimondParkour.dir/source/SocketUtility.cpp.o.requires
 
 .PHONY : CMakeFiles/DimondParkour.dir/requires
 

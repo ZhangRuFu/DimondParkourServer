@@ -6,9 +6,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/DimondParkour.dir/source/Convert.cpp.o"
   "CMakeFiles/DimondParkour.dir/source/Client.cpp.o"
   "CMakeFiles/DimondParkour.dir/source/GameLobby.cpp.o"
-  "CMakeFiles/DimondParkour.dir/source/CheckLobby.cpp.o"
   "CMakeFiles/DimondParkour.dir/source/GameRoom.cpp.o"
   "CMakeFiles/DimondParkour.dir/source/State.cpp.o"
+  "CMakeFiles/DimondParkour.dir/source/SocketUtility.cpp.o"
   "DimondParkour.pdb"
   "DimondParkour"
 )

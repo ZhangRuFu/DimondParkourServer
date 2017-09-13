@@ -41,46 +41,56 @@ void GameLobby::Update()
 {
     //监听游戏大厅中所有客户端的可读消息，进行其他场景切换
     char buffer[1024];
+    SerializeStream ss;
+
     while(true)
     {
         if(m_pollVector.size() == 0)
             continue;
         int readableCount = poll(m_pollVector.data(), m_pollVector.size(), -1);
+
         std::vector<pollfd>::iterator i = m_pollVector.begin();
         while(i < m_pollVector.end())
         {
             if(i->revents == 0)
                 continue;
 
+            //线程通信
             if(i->fd == m_conSock)
             {
-                //线程通信
                 uint64_t buffer;
                 read(i->fd, &buffer, sizeof(uint64_t));
                 --readableCount;
                 ++i;
+                continue;
             }
 
+            //处理消息
             int res = read(i->fd, buffer, 1024);
             buffer[res] = 0;
 
-            //===================================无可重用性============================
-            SerializeStream ss(buffer, res);
-            int mType = ss.GetFlag();
+            ss.AcceptStream(buffer, res);
+            std::vector<Message*> &m = ss.GetMessages();
+            Client *client = m_lobby[i->fd];
+            client->AcceptMessage(m);
 
-            //加入游戏消息
-            if(mType == Message::MessageType::StartGame)
-            {
-                Debug::Log("收到开始游戏消息");
-
-                //===============================交给Client处理消息===========================
-                Client *c = m_lobby[i->fd];
-                m_lobby.erase(i->fd);
-
-            }
             --readableCount;
             if(readableCount == 0)
                 break;
+        }
+
+        //剔除离开的客户端
+        for(std::vector<Client*>::iterator i = m_leaveClient.begin(); i < m_leaveClient.end(); ++i)
+        {
+            std::vector<pollfd>::iterator j = m_pollVector.begin();
+            while(j != m_pollVector.end())
+            {
+                if((*i)->GetClientSocket() == j->fd)
+                {
+                    j = m_pollVector.erase(j);
+                    m_lobby.erase(j->fd);
+                }
+            }
         }
     }
 }
@@ -99,6 +109,9 @@ void GameLobby::StartGame(Client *client)
         m_readyGame.pop();
         Leave(client);
         Leave(c2);
+
+        //告知客户端
+
     }
     else
     {
@@ -119,9 +132,8 @@ void GameLobby::CreateGameRoom(Client *c1, Client *c2)
 
 void GameLobby::Leave(Client *client)
 {
-    //=========================标记客户端已离开，在下一次更新时移除========================
-    m_lobby.erase(i->fd);
-    i = m_pollVector.erase(i);
+    //标记客户端，下次一并移出
+    m_leaveClient.push_back(client);
 }
 
 GameLobby::GameLobby()

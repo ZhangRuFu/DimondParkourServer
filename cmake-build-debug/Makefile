@@ -123,33 +123,6 @@ DimondParkour/fast:
 	$(MAKE) -f CMakeFiles/DimondParkour.dir/build.make CMakeFiles/DimondParkour.dir/build
 .PHONY : DimondParkour/fast
 
-source/CheckLobby.o: source/CheckLobby.cpp.o
-
-.PHONY : source/CheckLobby.o
-
-# target to build an object file
-source/CheckLobby.cpp.o:
-	$(MAKE) -f CMakeFiles/DimondParkour.dir/build.make CMakeFiles/DimondParkour.dir/source/CheckLobby.cpp.o
-.PHONY : source/CheckLobby.cpp.o
-
-source/CheckLobby.i: source/CheckLobby.cpp.i
-
-.PHONY : source/CheckLobby.i
-
-# target to preprocess a source file
-source/CheckLobby.cpp.i:
-	$(MAKE) -f CMakeFiles/DimondParkour.dir/build.make CMakeFiles/DimondParkour.dir/source/CheckLobby.cpp.i
-.PHONY : source/CheckLobby.cpp.i
-
-source/CheckLobby.s: source/CheckLobby.cpp.s
-
-.PHONY : source/CheckLobby.s
-
-# target to generate assembly for a file
-source/CheckLobby.cpp.s:
-	$(MAKE) -f CMakeFiles/DimondParkour.dir/build.make CMakeFiles/DimondParkour.dir/source/CheckLobby.cpp.s
-.PHONY : source/CheckLobby.cpp.s
-
 source/Client.o: source/Client.cpp.o
 
 .PHONY : source/Client.o
@@ -339,6 +312,33 @@ source/SerializeStream.cpp.s:
 	$(MAKE) -f CMakeFiles/DimondParkour.dir/build.make CMakeFiles/DimondParkour.dir/source/SerializeStream.cpp.s
 .PHONY : source/SerializeStream.cpp.s
 
+source/SocketUtility.o: source/SocketUtility.cpp.o
+
+.PHONY : source/SocketUtility.o
+
+# target to build an object file
+source/SocketUtility.cpp.o:
+	$(MAKE) -f CMakeFiles/DimondParkour.dir/build.make CMakeFiles/DimondParkour.dir/source/SocketUtility.cpp.o
+.PHONY : source/SocketUtility.cpp.o
+
+source/SocketUtility.i: source/SocketUtility.cpp.i
+
+.PHONY : source/SocketUtility.i
+
+# target to preprocess a source file
+source/SocketUtility.cpp.i:
+	$(MAKE) -f CMakeFiles/DimondParkour.dir/build.make CMakeFiles/DimondParkour.dir/source/SocketUtility.cpp.i
+.PHONY : source/SocketUtility.cpp.i
+
+source/SocketUtility.s: source/SocketUtility.cpp.s
+
+.PHONY : source/SocketUtility.s
+
+# target to generate assembly for a file
+source/SocketUtility.cpp.s:
+	$(MAKE) -f CMakeFiles/DimondParkour.dir/build.make CMakeFiles/DimondParkour.dir/source/SocketUtility.cpp.s
+.PHONY : source/SocketUtility.cpp.s
+
 source/State.o: source/State.cpp.o
 
 .PHONY : source/State.o
@@ -402,9 +402,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... DimondParkour"
-	@echo "... source/CheckLobby.o"
-	@echo "... source/CheckLobby.i"
-	@echo "... source/CheckLobby.s"
 	@echo "... source/Client.o"
 	@echo "... source/Client.i"
 	@echo "... source/Client.s"
@@ -426,6 +423,9 @@ help:
 	@echo "... source/SerializeStream.o"
 	@echo "... source/SerializeStream.i"
 	@echo "... source/SerializeStream.s"
+	@echo "... source/SocketUtility.o"
+	@echo "... source/SocketUtility.i"
+	@echo "... source/SocketUtility.s"
 	@echo "... source/State.o"
 	@echo "... source/State.i"
 	@echo "... source/State.s"

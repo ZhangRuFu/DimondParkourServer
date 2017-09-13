@@ -14,7 +14,7 @@ using std::u16string;
 
 std::string Message::Serialize(void)
 {
-    return Convert::IntToU8String(m_type);
+    std::string s = Convert::IntToU8String(m_type);
 }
 
 int Message::Deserialize(SerializeStream &stream)
@@ -27,7 +27,7 @@ int Message::Deserialize(SerializeStream &stream)
 //===========================JoinMessage======================
 std::string JoinMessage::Serialize(void)
 {
-    return Message::Serialize() + " " + Encoding::ToBytes(m_uid.data());
+    std::string s = Message::Serialize() + " " + Encoding::ToBytes(m_uid.data());
 }
 
 int JoinMessage::Deserialize(SerializeStream &stream)
@@ -66,5 +66,20 @@ int FightMessage::Deserialize(SerializeStream &stream)
     m_uid = stream.GetString(index);
     ++index;
     m_name = stream.GetString(index);
+    return index;
+}
+
+
+//PositionMessage
+std::string PositionMessage::Serialize()
+{
+    return Message::Serialize() + " " + m_operation;
+}
+
+int PositionMessage::Deserialize(SerializeStream &stream)
+{
+    int index = Message::Deserialize(stream);
+    ++index;
+    m_operation = stream.GetString(index)[0];
     return index;
 }
