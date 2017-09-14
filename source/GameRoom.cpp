@@ -12,7 +12,7 @@
 #include "../header/SocketUtility.h"
 #include "../header/Client.h"
 
-GameRoom::GameRoom(Client *c1, Client *c2)
+GameRoom::GameRoom(Client *c1, Client *c2) : m_gaming(true)
 {
     Debug::Log("新游戏房间创建");
     m_client[0] = c1;
@@ -36,6 +36,7 @@ GameRoom::GameRoom(Client *c1, Client *c2)
     fm.SetFightInfo(p->GetUID(), p->GetName());
     client->AcceptMessage(ms);
     client->EnterGameRoom(this);
+
 }
 
 void GameRoom::Update()
@@ -57,18 +58,16 @@ void GameRoom::Update()
         for(int i = 0; i < 2; ++i)
         {
             if(pfd[i].revents == 0)
-            {
-                ++i;
                 continue;
-            }
 
             //接收操作信息
             int recvCount = read(pfd[i].fd, m_buffer, BUFFSIZE);
-            m_buffer[readyCount] = 0;
+            m_buffer[recvCount] = 0;
 
-            ss.AcceptStream(m_buffer, readyCount);
+            ss.AcceptStream(m_buffer, recvCount);
             std::vector<Message*> &m = ss.GetMessages();
 
+            std::cout << "接收到操作信息" << i << std::endl;
             //同步信息
             m_client[i]->AcceptMessage(m);
 

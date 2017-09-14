@@ -20,6 +20,7 @@ public:
     int GetY(void) {return m_y;}
     void SetX(int x) { m_x = x;}
     void SetY(int y) { m_y = y;}
+    void SetName(std::u16string name){m_name = name;}
     std::u16string GetUID(void) {return m_uid;}
     std::u16string GetName(void) {return m_name;}
 };

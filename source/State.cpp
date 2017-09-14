@@ -31,6 +31,7 @@ State* CheckState::Execute(Message &message)
 
         //======================向数据库查询玩家信息====================
         Player *p = new Player(joinMessage.GetUID());
+        p->SetName(u"John");
         m_client->SetPlayer(p);
 
         //状态转移至JoinState
