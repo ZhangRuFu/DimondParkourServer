@@ -4,16 +4,16 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/zrf/桌面/DimondParkour/source/Client.cpp" "/home/zrf/桌面/DimondParkour/cmake-build-debug/CMakeFiles/DimondParkour.dir/source/Client.cpp.o"
-  "/home/zrf/桌面/DimondParkour/source/Convert.cpp" "/home/zrf/桌面/DimondParkour/cmake-build-debug/CMakeFiles/DimondParkour.dir/source/Convert.cpp.o"
-  "/home/zrf/桌面/DimondParkour/source/Encoding.cpp" "/home/zrf/桌面/DimondParkour/cmake-build-debug/CMakeFiles/DimondParkour.dir/source/Encoding.cpp.o"
-  "/home/zrf/桌面/DimondParkour/source/GameLobby.cpp" "/home/zrf/桌面/DimondParkour/cmake-build-debug/CMakeFiles/DimondParkour.dir/source/GameLobby.cpp.o"
-  "/home/zrf/桌面/DimondParkour/source/GameRoom.cpp" "/home/zrf/桌面/DimondParkour/cmake-build-debug/CMakeFiles/DimondParkour.dir/source/GameRoom.cpp.o"
-  "/home/zrf/桌面/DimondParkour/source/Message.cpp" "/home/zrf/桌面/DimondParkour/cmake-build-debug/CMakeFiles/DimondParkour.dir/source/Message.cpp.o"
-  "/home/zrf/桌面/DimondParkour/source/SerializeStream.cpp" "/home/zrf/桌面/DimondParkour/cmake-build-debug/CMakeFiles/DimondParkour.dir/source/SerializeStream.cpp.o"
-  "/home/zrf/桌面/DimondParkour/source/SocketUtility.cpp" "/home/zrf/桌面/DimondParkour/cmake-build-debug/CMakeFiles/DimondParkour.dir/source/SocketUtility.cpp.o"
-  "/home/zrf/桌面/DimondParkour/source/State.cpp" "/home/zrf/桌面/DimondParkour/cmake-build-debug/CMakeFiles/DimondParkour.dir/source/State.cpp.o"
-  "/home/zrf/桌面/DimondParkour/source/main.cpp" "/home/zrf/桌面/DimondParkour/cmake-build-debug/CMakeFiles/DimondParkour.dir/source/main.cpp.o"
+  "/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/source/Client.cpp" "/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/cmake-build-debug/CMakeFiles/DimondParkour.dir/source/Client.cpp.o"
+  "/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/source/Convert.cpp" "/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/cmake-build-debug/CMakeFiles/DimondParkour.dir/source/Convert.cpp.o"
+  "/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/source/Encoding.cpp" "/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/cmake-build-debug/CMakeFiles/DimondParkour.dir/source/Encoding.cpp.o"
+  "/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/source/GameLobby.cpp" "/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/cmake-build-debug/CMakeFiles/DimondParkour.dir/source/GameLobby.cpp.o"
+  "/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/source/GameRoom.cpp" "/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/cmake-build-debug/CMakeFiles/DimondParkour.dir/source/GameRoom.cpp.o"
+  "/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/source/Message.cpp" "/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/cmake-build-debug/CMakeFiles/DimondParkour.dir/source/Message.cpp.o"
+  "/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/source/SerializeStream.cpp" "/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/cmake-build-debug/CMakeFiles/DimondParkour.dir/source/SerializeStream.cpp.o"
+  "/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/source/SocketUtility.cpp" "/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/cmake-build-debug/CMakeFiles/DimondParkour.dir/source/SocketUtility.cpp.o"
+  "/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/source/State.cpp" "/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/cmake-build-debug/CMakeFiles/DimondParkour.dir/source/State.cpp.o"
+  "/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/source/main.cpp" "/home/zrf/Desktop/DimondParkourServer/DimondParkourServer/cmake-build-debug/CMakeFiles/DimondParkour.dir/source/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

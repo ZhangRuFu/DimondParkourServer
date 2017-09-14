@@ -8,10 +8,12 @@
 #include "../header/Client.h"
 #include "../header/GameLobby.h"
 #include "../header/SocketUtility.h"
+#include "../header/Debug.h"
 
 //等待校验状态
 void CheckState::Enter()
 {
+    Debug::Log("进入Check状态");
     if(m_client->GetServerPosition() != Client::ServerPosition::GameLobby)
     {
         GameLobby::Instance()->JoinLobby(m_client);
@@ -21,6 +23,7 @@ void CheckState::Enter()
 
 State* CheckState::Execute(Message &message)
 {
+    Debug::Log("CheckState执行");
     //接受JoinMessage进行校验，通过则转移到JoinState
     if(message.GetMessageType() == Message::MessageType::Join)
     {
@@ -47,6 +50,7 @@ void CheckState::Quit()
 //游戏大厅状态
 void JoinState::Enter()
 {
+    Debug::Log("进入JoinState");
     if(m_client->GetServerPosition() != Client::ServerPosition::GameLobby)
     {
         GameLobby::Instance()->JoinLobby(m_client);
@@ -60,6 +64,7 @@ State* JoinState::Execute(Message &message)
     if(message.GetMessageType() == Message::MessageType::StartGame)
     {
         //转入游戏匹配队列
+        Debug::Log("进入匹配队列");
         GameLobby::Instance()->StartGame(m_client);
     }//接收到FightMessage转游戏状态
     else if(message.GetMessageType() == Message::MessageType::Fight) {
@@ -82,7 +87,8 @@ void JoinState::Quit()
 //游戏状态
 void GameState::Enter()
 {
-
+    Debug::Log("进入GameSate");
+    m_client->SetServerPosition(Client::ServerPosition::GameRoom);
 }
 
 State* GameState::Execute(Message &message)
@@ -96,11 +102,10 @@ State* GameState::Execute(Message &message)
     }
         //我方胜利
     else if(message.GetMessageType() == Message::MessageType::GameWin)
-        SocketUtility::SendMessage(m_client->GetClientSocket(), message);
+        m_client->FeedBackMessage(message);
         //我方失败
     else if(message.GetMessageType() == Message::MessageType::GameOver)
         m_room->GameOver(m_client);
-
     else
         return nullptr;
 

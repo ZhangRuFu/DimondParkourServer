@@ -14,7 +14,7 @@ using std::u16string;
 
 std::string Message::Serialize(void)
 {
-    std::string s = Convert::IntToU8String(m_type);
+    return Convert::IntToU8String(m_type);
 }
 
 int Message::Deserialize(SerializeStream &stream)
@@ -27,7 +27,7 @@ int Message::Deserialize(SerializeStream &stream)
 //===========================JoinMessage======================
 std::string JoinMessage::Serialize(void)
 {
-    std::string s = Message::Serialize() + " " + Encoding::ToBytes(m_uid.data());
+    return Message::Serialize() + " " + Encoding::ToBytes(m_uid.data());
 }
 
 int JoinMessage::Deserialize(SerializeStream &stream)

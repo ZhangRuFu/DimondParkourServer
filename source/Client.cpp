@@ -15,7 +15,7 @@
 Client::Client(int clientSocket) : m_clientSocket(clientSocket)
 {
     //初始化状态
-    m_state = new CheckState(this);
+    ChangeState(new CheckState(this));
 }
 
 //资源释放
@@ -41,8 +41,10 @@ void Client::ChangeState(State *newState)
 {
     if(newState == nullptr)
         return;
-    m_state->Quit();
-    delete m_state;
+    if(m_state != nullptr) {
+        m_state->Quit();
+        delete m_state;
+    }
     m_state = newState;
     m_state->Enter();
 }

@@ -14,22 +14,25 @@
 
 GameRoom::GameRoom(Client *c1, Client *c2)
 {
-    Debug::Log("新房间创建");
+    Debug::Log("新游戏房间创建");
     m_client[0] = c1;
     m_client[1] = c2;
 
     //发送房间信息
     std::vector<Message*> ms;
     FightMessage fm;
-    Player *p = m_client[0]->GetPlayer();
-    Client *client = m_client[1];
+
+    //发送给0号玩家
+    Player *p = m_client[1]->GetPlayer();
+    Client *client = m_client[0];
     fm.SetFightInfo(p->GetUID(), p->GetName());
     ms.push_back(&fm);
     client->AcceptMessage(ms);
     client->EnterGameRoom(this);
 
-    p = m_client[1]->GetPlayer();
-    client = m_client[0];
+    //发送给1号玩家
+    p = m_client[0]->GetPlayer();
+    client = m_client[1];
     fm.SetFightInfo(p->GetUID(), p->GetName());
     client->AcceptMessage(ms);
     client->EnterGameRoom(this);
@@ -54,20 +57,22 @@ void GameRoom::Update()
         for(int i = 0; i < 2; ++i)
         {
             if(pfd[i].revents == 0)
+            {
+                ++i;
                 continue;
+            }
 
             //接收操作信息
             int recvCount = read(pfd[i].fd, m_buffer, BUFFSIZE);
             m_buffer[readyCount] = 0;
 
-            int another = i == 0 ? 1 : 0;
-
             ss.AcceptStream(m_buffer, readyCount);
             std::vector<Message*> &m = ss.GetMessages();
 
+            //同步信息
+            m_client[i]->AcceptMessage(m);
 
-            m_client[another]->AcceptMessage(m);
-
+            ++i;
             --readyCount;
             if(readyCount == 0)
                 break;
@@ -77,6 +82,7 @@ void GameRoom::Update()
     //游戏结束
 }
 
+//同步位置给其他玩家
 void GameRoom::SynchronizePosition(PositionMessage &message, Client *client)
 {
     Client *another = (client == m_client[0] ? m_client[1] : m_client[0]);
@@ -99,5 +105,5 @@ void GameRoom::GameOver(Client *client)
 void GameRoom::GameRoomThread(GameRoom *room)
 {
     room->Update();
-    delete room;
+    //=========================对战结束，告知游戏大厅进行清理============================
 }

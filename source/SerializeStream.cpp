@@ -20,8 +20,14 @@ void SerializeStream::AcceptStream(char *buffer, int size)
 
 void SerializeStream::DisposeMessage()
 {
+    //FIN消息
+    if(m_size == 0)
+    {
+        Message *m = new Message(Message::MessageType::Quit);
+        m_messages.push_back(m);
+        return;
+    }
     //多个消息可能会叠加到一起，根据长度进行
-    char *cur = m_buffer;
     int start = 0, end = 0;
     std::pair<int, int> pos;
     while(end < m_size)
@@ -45,12 +51,16 @@ void SerializeStream::Split()
             spacePos.push_back(i);
 
     //Split
-    if(spacePos[0] != 0)
-        m_splitInfo.push_back(std::make_pair(0, spacePos[0] - 1));
-    for(int i = 0; i < spacePos.size() - 1; ++i)
-        m_splitInfo.push_back(std::make_pair(spacePos[i] + 1, spacePos[i + 1] - 1));
-    if(spacePos[spacePos.size() - 1] != m_info.size() - 1)
-        m_splitInfo.push_back(std::make_pair(spacePos[spacePos.size() - 1], m_info.size() - 1));
+    if(spacePos.size() == 0)
+        m_splitInfo.push_back(std::make_pair(0, m_info.size() - 1));
+    else {//防止Message类无空格消息
+        if (spacePos[0] != 0)
+            m_splitInfo.push_back(std::make_pair(0, spacePos[0] - 1));
+        for (int i = 0; i < spacePos.size() - 1; ++i)
+            m_splitInfo.push_back(std::make_pair(spacePos[i] + 1, spacePos[i + 1] - 1));
+        if (spacePos[spacePos.size() - 1] != m_info.size() - 1)
+            m_splitInfo.push_back(std::make_pair(spacePos[spacePos.size() - 1] + 1, m_info.size() - 1));
+    }
 }
 
 std::u16string SerializeStream::GetString(int index)

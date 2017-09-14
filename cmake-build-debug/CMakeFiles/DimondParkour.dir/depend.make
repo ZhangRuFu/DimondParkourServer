@@ -58,6 +58,7 @@ CMakeFiles/DimondParkour.dir/source/SocketUtility.cpp.o: ../header/SocketUtility
 CMakeFiles/DimondParkour.dir/source/SocketUtility.cpp.o: ../source/SocketUtility.cpp
 
 CMakeFiles/DimondParkour.dir/source/State.cpp.o: ../header/Client.h
+CMakeFiles/DimondParkour.dir/source/State.cpp.o: ../header/Debug.h
 CMakeFiles/DimondParkour.dir/source/State.cpp.o: ../header/GameLobby.h
 CMakeFiles/DimondParkour.dir/source/State.cpp.o: ../header/GameRoom.h
 CMakeFiles/DimondParkour.dir/source/State.cpp.o: ../header/Message.h

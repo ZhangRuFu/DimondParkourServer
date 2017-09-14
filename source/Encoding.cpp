@@ -7,7 +7,8 @@
 using namespace std;
 string Encoding::ToBytes(const char16_t *utf16Str)
 {
-    return m_converter.to_bytes(utf16Str);
+    string str = m_converter.to_bytes(utf16Str);
+    return str;
 }
 
 u16string Encoding::FromBytes(const char *utf8Str)

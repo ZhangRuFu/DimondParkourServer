@@ -1,2 +1,2 @@
 Options: 
-CMake: 3.7.1@/usr/bin/clion/clion-2017.1.1/bin/cmake/bin/cmake
+CMake: 3.7.1@/home/zrf/Software/CLion/clion-2017.1.1/bin/cmake/bin/cmake

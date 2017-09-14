@@ -23,9 +23,11 @@ private:
     std::list<GameRoom*> m_gameRooms;
     std::list<std::thread*> m_roomThreads;
 
-    //准备开始队列
+    //准备开始游戏队列
     std::queue<Client*> m_readyGame;
 
+    //新成员队列
+    std::queue<Client*> m_newCommer;
     //大厅队列
     std::vector<pollfd> m_pollVector;
     std::map<int, Client*> m_lobby;

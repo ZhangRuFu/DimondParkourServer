@@ -12,7 +12,7 @@ class SerializeStream;
 class Message
 {
 public:
-    enum MessageType{Join, Chat, StartGame, StartShop, Fight, Position, GameOver, GameWin};
+    enum MessageType{Join, Chat, StartGame, StartShop, Fight, Position, GameOver, GameWin, Quit};
 
 private:
     MessageType m_type;
