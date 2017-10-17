@@ -65,7 +65,6 @@ State* JoinState::Execute(Message &message)
     if(message.GetMessageType() == Message::MessageType::StartGame)
     {
         //转入游戏匹配队列
-        Debug::Log("进入匹配队列");
         GameLobby::Instance()->StartGame(m_client);
     }//接收到FightMessage转游戏状态
     else if(message.GetMessageType() == Message::MessageType::Fight) {

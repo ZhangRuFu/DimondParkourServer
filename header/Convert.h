@@ -13,13 +13,13 @@ public:
     static float StringToFloat(std::u16string str);
     static double StringToDouble(std::u16string str);
 
-    static std::u16string IntToU16String(int num);
-    static std::u16string FloatToU16String(float num);
-    static std::u16string DoubleToU16String(double num);
+    static std::u16string ToU16String(int num);
+    static std::u16string ToU16String(float num);
+    static std::u16string ToU16String(double num);
 
-    static std::string IntToU8String(int num);
-    static std::string FloatToU8String(float num);
-    static std::string DoubleToU8String(double num);
+    static std::string ToU8String(int num);
+    static std::string ToU8String(float num);
+    static std::string ToU8String(double num);
 };
 
 #endif //DIMONDPARKOUR_CONVERT_H

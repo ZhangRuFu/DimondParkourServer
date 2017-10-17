@@ -28,7 +28,7 @@ double Convert::StringToDouble(std::u16string str)
     return num;
 }
 
-std::u16string Convert::IntToU16String(int num)
+std::u16string Convert::ToU16String(int num)
 {
     char buffer[10];
     sprintf(buffer, "%d", num);
@@ -36,7 +36,7 @@ std::u16string Convert::IntToU16String(int num)
     return str;
 }
 
-std::u16string Convert::FloatToU16String(float num)
+std::u16string Convert::ToU16String(float num)
 {
     char buffer[10];
     sprintf(buffer, "%f", num);
@@ -44,7 +44,7 @@ std::u16string Convert::FloatToU16String(float num)
     return str;
 }
 
-std::u16string Convert::DoubleToU16String(double num)
+std::u16string Convert::ToU16String(double num)
 {
     char buffer[10];
     sprintf(buffer, "%lf", num);
@@ -53,21 +53,21 @@ std::u16string Convert::DoubleToU16String(double num)
 }
 
 
-std::string Convert::IntToU8String(int num)
+std::string Convert::ToU8String(int num)
 {
     char buffer[10];
     sprintf(buffer, "%d", num);
     return std::string(buffer);
 }
 
-std::string Convert::FloatToU8String(float num)
+std::string Convert::ToU8String(float num)
 {
     char buffer[10];
     sprintf(buffer, "%f", num);
     return std::string(buffer);
 }
 
-std::string Convert::DoubleToU8String(double num)
+std::string Convert::ToU8String(double num)
 {
     char buffer[10];
     sprintf(buffer, "%lf", num);

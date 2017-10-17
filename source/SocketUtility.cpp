@@ -6,11 +6,13 @@
 #include "../header/Encoding.h"
 #include "../header/Convert.h"
 #include <unistd.h>
+#include <iostream>
 
 void SocketUtility::SendMessage(int socket, Message &m)
 {
     std::string buffer = m.Serialize();
+    std::cout << "回送消息" << buffer << std::endl;
     int len = buffer.size();
-    buffer = Convert::IntToU8String(len) + " " + buffer;
+    buffer = Convert::ToU8String(len) + " " + buffer;
     write(socket, buffer.data(), buffer.size());
 }

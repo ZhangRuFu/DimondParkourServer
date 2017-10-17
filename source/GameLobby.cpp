@@ -33,7 +33,6 @@ void GameLobby::JoinLobby(Client *newPlayer)
 
 void GameLobby::Update()
 {
-    //监听游戏大厅中所有客户端的可读消息，进行其他场景切换
     char buffer[1024];
     SerializeStream ss;
 
@@ -42,7 +41,7 @@ void GameLobby::Update()
         std::vector<pollfd>::iterator i = m_pollVector.begin();
         int readableCount = poll(m_pollVector.data(), m_pollVector.size(), -1);
 
-        std::cout << "可读" << readableCount << std::endl;
+        std::cout << "poll可读数目" << readableCount << std::endl;
         while(i < m_pollVector.end())
         {
             if (i->revents == 0)
@@ -61,7 +60,7 @@ void GameLobby::Update()
             //处理消息
             else
             {
-                std::cout << "接收到消息-" << i->fd << std::endl;
+                std::cout << "准备接收消息-" << i->fd << std::endl;
                 int res = read(i->fd, buffer, 1024);
                 Debug::Log("消息接收完成");
                 buffer[res] = 0;
@@ -70,7 +69,7 @@ void GameLobby::Update()
                 std::vector<Message *> &m = ss.GetMessages();
                 Client *client = m_lobby[i->fd];
                 client->AcceptMessage(m);
-                Debug::Log("消息处理完成");
+                Debug::Log("消息递交完成");
             }
             ++i;
             --readableCount;
@@ -138,7 +137,8 @@ void GameLobby::CreateGameRoom(Client *c1, Client *c2)
     GameRoom *room = new GameRoom(c1, c2);
     m_gameRooms.push_back(room);
     std::thread *t = new std::thread(GameRoom::GameRoomThread, room);
-    m_roomThreads.push_back(t);
+    //m_roomThreads.push_back(t);
+    m_roomThreads[room] = t;
 }
 
 void GameLobby::Leave(Client *client)
@@ -154,6 +154,15 @@ GameLobby::GameLobby()
     conFd.fd = m_conSock;
     conFd.events = POLLIN;
     m_pollVector.push_back(conFd);
+}
+
+void GameLobby::Dissolve(GameRoom *room)
+{
+    delete room;
+    std::thread *t = m_roomThreads[room];
+    t->join();
+    delete t;
+    m_roomThreads.erase(room);
 }
 
 GameLobby *GameLobby::m_instance = GameLobby::Init();

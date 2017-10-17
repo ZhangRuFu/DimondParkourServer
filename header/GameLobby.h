@@ -21,7 +21,7 @@ class GameLobby
 private:
     //游戏房间
     std::list<GameRoom*> m_gameRooms;
-    std::list<std::thread*> m_roomThreads;
+    std::map<GameRoom*, std::thread*> m_roomThreads;
 
     //准备开始游戏队列
     std::queue<Client*> m_readyGame;
@@ -50,6 +50,7 @@ public:
     void JoinLobby(Client *newPlayer);
     void StartGame(Client *client);
     void Leave(Client *client);
+    void Dissolve(GameRoom *client);
 
     int Count(void) {return m_lobby.size();}
 

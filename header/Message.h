@@ -12,12 +12,6 @@ class SerializeStream;
 class Message
 {
 public:
-    enum MessageType{Join, Chat, StartGame, StartShop, Fight, Position, GameOver, GameWin, Quit};
-
-private:
-    MessageType m_type;
-
-public:
     Message(MessageType type) : m_type(type){}
 
     MessageType GetMessageType(void){return m_type;}
@@ -67,13 +61,24 @@ class FightMessage : public Message
 private:
     std::u16string m_uid;       //对手UID
     std::u16string m_name;      //对手姓名
+    int m_playerX, m_playerZ;   //我方坐标
+    int m_enemyX, m_enemyZ;     //地方坐标
+    int m_seed;
 
 public:
     FightMessage(void) : Message(Message::MessageType::Fight){}
 
     void SetFightInfo(std::u16string uid, std::u16string name) {m_uid = uid, m_name = name;}
+    void SetPlayerX(int x) {m_playerX = x;}
+    void SetPlayerZ(int z) {m_playerZ = z;}
+    void SetEnemyX(int x) {m_enemyX = x;}
+    void SetEnemyZ(int z) {m_enemyZ = z;}
+    void SetSeed(int seed) {m_seed = seed;}
+
     std::u16string GetFightUID(void){return m_uid;}
     std::u16string GetFightName(void) {return m_name;}
+    int GetSeed(void) {return m_seed;}
+
 
     virtual int Deserialize(SerializeStream &stream);
     virtual std::string Serialize(void);

@@ -8,13 +8,13 @@
 #include "../header/SerializeStream.h"
 #include "../header/Client.h"
 #include "../header/ThreadManager.h"
+#include "../header/Debug.h"
 #include <thread>
 
 #define PORT 8888
 typedef unsigned char byte;
 
 int main() {
-    //using namespace std;
     int res = 0;
 
     ThreadManager tm;
@@ -28,17 +28,22 @@ int main() {
     res = bind(serSocket, (sockaddr *) &serAddr, sizeof(serAddr));
     if (res == -1)
     {
-        std::cout << "套接字绑定出错!" << std::endl;
+        Debug::Error("套接字绑定出错!");
         return 1;
     }
     listen(serSocket, 10);
-    while (true) {
+    Debug::Log("服务器进入监听状态");
+    while (true)
+    {
         sockaddr_in clientAddr;
         socklen_t sockLen = sizeof(clientAddr);
         int clientSock = accept(serSocket, (sockaddr *) &clientAddr, &sockLen);
 
         //新玩家加入
-        std::cout << "新玩家加入，客户端IP:" << inet_ntoa(clientAddr.sin_addr) << " 端口号:" << ntohs(clientAddr.sin_port) << std::endl;
+        std::string str = "新玩家加入，客户端IP:";
+        str = str + inet_ntoa(clientAddr.sin_addr) + " 端口号:";
+        str += ntohs(clientAddr.sin_port);
+        Debug::Log(str.data());
 
         //套接字资源属主转移,交由状态机处理
         Client *newClient = new Client(clientSock);

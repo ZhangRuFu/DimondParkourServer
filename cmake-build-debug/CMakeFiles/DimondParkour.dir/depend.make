@@ -31,6 +31,7 @@ CMakeFiles/DimondParkour.dir/source/GameLobby.cpp.o: ../source/GameLobby.cpp
 CMakeFiles/DimondParkour.dir/source/GameRoom.cpp.o: ../header/Client.h
 CMakeFiles/DimondParkour.dir/source/GameRoom.cpp.o: ../header/Debug.h
 CMakeFiles/DimondParkour.dir/source/GameRoom.cpp.o: ../header/Encoding.h
+CMakeFiles/DimondParkour.dir/source/GameRoom.cpp.o: ../header/GameLobby.h
 CMakeFiles/DimondParkour.dir/source/GameRoom.cpp.o: ../header/GameRoom.h
 CMakeFiles/DimondParkour.dir/source/GameRoom.cpp.o: ../header/Message.h
 CMakeFiles/DimondParkour.dir/source/GameRoom.cpp.o: ../header/Player.h

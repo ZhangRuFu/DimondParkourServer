@@ -14,7 +14,6 @@
 
 Client::Client(int clientSocket) : m_clientSocket(clientSocket)
 {
-    //初始化状态
     ChangeState(new CheckState(this));
 }
 

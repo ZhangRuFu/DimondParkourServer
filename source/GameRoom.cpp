@@ -11,6 +11,7 @@
 #include "../header/Debug.h"
 #include "../header/SocketUtility.h"
 #include "../header/Client.h"
+#include "../header/GameLobby.h"
 
 GameRoom::GameRoom(Client *c1, Client *c2) : m_gaming(true)
 {
@@ -21,11 +22,20 @@ GameRoom::GameRoom(Client *c1, Client *c2) : m_gaming(true)
     //发送房间信息
     std::vector<Message*> ms;
     FightMessage fm;
+    fm.SetSeed(random() % 100);
+    int x1 = 3;
+    int z = 4;
+    int x2 = 4;
 
     //发送给0号玩家
     Player *p = m_client[1]->GetPlayer();
     Client *client = m_client[0];
     fm.SetFightInfo(p->GetUID(), p->GetName());
+    fm.SetPlayerX(x1);
+    fm.SetPlayerZ(z);
+    fm.SetEnemyX(x2);
+    fm.SetEnemyZ(z);
+
     ms.push_back(&fm);
     client->AcceptMessage(ms);
     client->EnterGameRoom(this);
@@ -34,6 +44,8 @@ GameRoom::GameRoom(Client *c1, Client *c2) : m_gaming(true)
     p = m_client[0]->GetPlayer();
     client = m_client[1];
     fm.SetFightInfo(p->GetUID(), p->GetName());
+    fm.SetPlayerX(x2);
+    fm.SetEnemyX(x1);
     client->AcceptMessage(ms);
     client->EnterGameRoom(this);
 
@@ -104,5 +116,5 @@ void GameRoom::GameOver(Client *client)
 void GameRoom::GameRoomThread(GameRoom *room)
 {
     room->Update();
-    //=========================对战结束，告知游戏大厅进行清理============================
+    GameLobby::Instance()->Dissolve(room);
 }

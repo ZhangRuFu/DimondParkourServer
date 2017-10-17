@@ -14,7 +14,7 @@ using std::u16string;
 
 std::string Message::Serialize(void)
 {
-    return Convert::IntToU8String(m_type);
+    return Convert::ToU8String(m_type);
 }
 
 int Message::Deserialize(SerializeStream &stream)
@@ -56,7 +56,12 @@ int ChatMessage::Deserialize(SerializeStream &stream)
 //==========================FightMessage=======================
 std::string FightMessage::Serialize()
 {
-    return Message::Serialize() + " " + Encoding::ToBytes(m_uid.data()) + " " + Encoding::ToBytes(m_name.data());
+    return Message::Serialize() + " " + Encoding::ToBytes(m_uid.data()) + " " + Encoding::ToBytes(m_name.data()) + " " +
+            Convert::ToU8String(m_playerX) + " " +
+            Convert::ToU8String(m_playerZ) + " " +
+            Convert::ToU8String(m_enemyX) + " " +
+            Convert::ToU8String(m_enemyZ) + " " +
+            Convert::ToU8String(m_seed);
 }
 
 int FightMessage::Deserialize(SerializeStream &stream)
@@ -66,6 +71,16 @@ int FightMessage::Deserialize(SerializeStream &stream)
     m_uid = stream.GetString(index);
     ++index;
     m_name = stream.GetString(index);
+    ++index;
+    m_playerX = Convert::StringToInt(stream.GetString(index));
+    ++index;
+    m_playerZ = Convert::StringToInt(stream.GetString(index));
+    ++index;
+    m_enemyX = Convert::StringToInt(stream.GetString(index));
+    ++index;
+    m_enemyZ = Convert::StringToInt(stream.GetString(index));
+    ++index;
+    m_seed = Convert::StringToInt(stream.GetString(index));
     return index;
 }
 

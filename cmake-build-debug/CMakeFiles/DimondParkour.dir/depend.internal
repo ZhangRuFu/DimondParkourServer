@@ -32,6 +32,7 @@ CMakeFiles/DimondParkour.dir/source/GameRoom.cpp.o
  /home/zrf/Desktop/DimondParkourServer/DimondParkourServer/header/Client.h
  /home/zrf/Desktop/DimondParkourServer/DimondParkourServer/header/Debug.h
  /home/zrf/Desktop/DimondParkourServer/DimondParkourServer/header/Encoding.h
+ /home/zrf/Desktop/DimondParkourServer/DimondParkourServer/header/GameLobby.h
  /home/zrf/Desktop/DimondParkourServer/DimondParkourServer/header/GameRoom.h
  /home/zrf/Desktop/DimondParkourServer/DimondParkourServer/header/Message.h
  /home/zrf/Desktop/DimondParkourServer/DimondParkourServer/header/Player.h

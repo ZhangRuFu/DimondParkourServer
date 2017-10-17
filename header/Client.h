@@ -10,14 +10,12 @@
 #include "State.h"
 #include <vector>
 
-//抽象客户端
 //封装发送数据、接收数据以及需要的客户端数据信息
 //包含套接字操作，不符合职责单一原则
 class GameRoom;
 class Client
 {
 public:
-    //客户端位置
     enum class ServerPosition{None, GameLobby, GameRoom};
 
 private:

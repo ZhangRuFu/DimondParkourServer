@@ -1,0 +1,13 @@
+<MessageDefination>
+	<Message name="Login"></Message>
+	<Message name="GameModeSelect"></Message>
+	<Message name="GameResult"></Message>
+	<Message name="StoreState"></Message>
+	<Message name="GameState"></Message>
+	<Message name="Join"></Message>
+	<Message name="Chat"></Message>
+	<Message name="Fight"></Message>
+	<Message name="Position"></Message>
+	<Message name="Score"></Message>
+	<Message name="Gem"></Message>
+</MessageDefination>
